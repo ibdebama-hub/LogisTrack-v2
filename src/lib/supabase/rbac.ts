@@ -2,9 +2,7 @@ import { createClient, SupabaseClient } from '@supabase/supabase-js';
 import { cookies, headers } from 'next/headers';
 import { redirect } from 'next/navigation';
 import { UserRole } from '@/middleware';
-
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://demo.supabase.co';
-const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'demo-key';
+import { SUPABASE_URL, SUPABASE_ANON_KEY } from './client';
 
 export interface UserAuthContext {
   userId: string | null;
@@ -21,7 +19,7 @@ export function createServerComponentClient(): SupabaseClient {
   const cookieStore = cookies();
   const token = cookieStore.get('sb-access-token')?.value || '';
 
-  return createClient(supabaseUrl, supabaseKey, {
+  return createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
     auth: {
       persistSession: false,
     },

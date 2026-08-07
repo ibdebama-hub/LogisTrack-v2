@@ -1,10 +1,5 @@
-import { createClient } from '@supabase/supabase-js';
+import { supabase } from './client';
 import { ImportedRow, ItemStatus, ItemType, PaymentStatus } from '../../types/logistrack';
-
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://demo.supabase.co';
-const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'demo-key';
-
-export const supabase = createClient(supabaseUrl, supabaseKey);
 
 export interface FetchInvoicesOptions {
   organizationId: string;
