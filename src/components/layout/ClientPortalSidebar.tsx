@@ -2,7 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
+import { supabase } from '../../lib/supabase/queries';
 import {
   LayoutDashboard,
   Layers,
@@ -37,6 +38,18 @@ export default function ClientPortalSidebar({
   activeClient
 }: ClientPortalSidebarProps) {
   const pathname = usePathname();
+  const router = useRouter();
+
+  const handleLogout = async () => {
+    try {
+      if (typeof window !== 'undefined') {
+        localStorage.removeItem('logistrack_user_session');
+        document.cookie = 'user_role=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT';
+      }
+      await supabase.auth.signOut();
+    } catch (e) {}
+    router.push('/login');
+  };
 
   const [clientInfo, setClientInfo] = useState({
     client_name: activeClient.client_name,
@@ -177,13 +190,13 @@ export default function ClientPortalSidebar({
             </div>
 
             {!isCollapsed && (
-              <Link
-                href="/overview"
+              <button
+                onClick={handleLogout}
                 className="p-2 text-slate-400 hover:text-rose-400 rounded-xl hover:bg-slate-900 transition-colors"
-                title="Quitter le Portail B2B"
+                title="Se déconnecter"
               >
                 <LogOut className="w-4 h-4" />
-              </Link>
+              </button>
             )}
           </div>
         </div>

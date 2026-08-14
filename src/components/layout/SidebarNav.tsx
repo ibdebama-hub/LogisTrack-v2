@@ -2,7 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
+import { supabase } from '../../lib/supabase/queries';
 import {
   LayoutDashboard,
   Building2,
@@ -109,12 +110,26 @@ export default function SidebarNav({
   onCloseMobile
 }: SidebarNavProps) {
   const pathname = usePathname();
+  const router = useRouter();
   const [activeOrg, setActiveOrg] = useState('Logistics West Africa (Siège)');
   const [userInfo, setUserInfo] = useState({
     name: 'Yves Touré',
     initials: 'YT',
     role: 'Dispatcher Principal'
   });
+
+  const handleLogout = async () => {
+    try {
+      if (typeof window !== 'undefined') {
+        localStorage.removeItem('logistrack_user_session');
+        document.cookie = 'user_role=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT';
+      }
+      await supabase.auth.signOut();
+    } catch (e) {
+      console.warn('Logout error:', e);
+    }
+    router.push('/login');
+  };
 
   useEffect(() => {
     try {
@@ -253,7 +268,11 @@ export default function SidebarNav({
             </div>
 
             {!isCollapsed && (
-              <button className="p-2 text-slate-400 hover:text-rose-400 rounded-lg hover:bg-slate-900 transition-colors">
+              <button
+                onClick={handleLogout}
+                title="Se déconnecter"
+                className="p-2 text-slate-400 hover:text-rose-400 rounded-lg hover:bg-slate-900 transition-colors"
+              >
                 <LogOut className="w-4 h-4" />
               </button>
             )}
