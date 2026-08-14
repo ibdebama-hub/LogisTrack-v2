@@ -2,11 +2,11 @@
 
 import React, { useState } from 'react';
 import { DollarSign, FileText, Settings, Plus, Sparkles, CheckCircle2 } from 'lucide-react';
-import B2BInvoiceList from '@/components/modules/finance/B2BInvoiceList';
-import RateMatrixConfig from '@/components/modules/finance/RateMatrixConfig';
-import InvoicePreviewModal from '@/components/modules/finance/InvoicePreviewModal';
-import { MOCK_B2B_INVOICES, MOCK_CLIENT_RATES } from '@/lib/mockBillingData';
-import { B2BInvoice, ClientRateConfig } from '@/types/b2bBilling';
+import B2BInvoiceList from '../../../../components/modules/finance/B2BInvoiceList';
+import RateMatrixConfig from '../../../../components/modules/finance/RateMatrixConfig';
+import InvoicePreviewModal from '../../../../components/modules/finance/InvoicePreviewModal';
+import { MOCK_B2B_INVOICES, MOCK_CLIENT_RATES } from '../../../../lib/mockBillingData';
+import { B2BInvoice, ClientRateConfig } from '../../../../types/b2bBilling';
 
 export default function B2BBillingPage() {
   const [activeTab, setActiveTab] = useState<'invoices' | 'rates'>('invoices');

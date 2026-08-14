@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import CodReconciliationHub from '@/components/modules/cod/CodReconciliationHub';
+import CodReconciliationHub from '../../../components/modules/cod/CodReconciliationHub';
 
 export default function CODReconciliationPage() {
   return (

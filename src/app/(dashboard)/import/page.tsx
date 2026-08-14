@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import CSVBatchImportManager from '@/components/modules/import/CSVBatchImportManager';
+import CSVBatchImportManager from '../../../components/modules/import/CSVBatchImportManager';
 
 export default function ImportPage() {
   return (

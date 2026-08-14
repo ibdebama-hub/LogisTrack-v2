@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import DistributionAnalytics from '@/components/modules/dashboard/DistributionAnalytics';
+import DistributionAnalytics from '../../../components/modules/dashboard/DistributionAnalytics';
 
 export default function DispatcherOverviewPage() {
   return (

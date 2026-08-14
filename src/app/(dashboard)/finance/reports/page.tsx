@@ -2,11 +2,11 @@
 
 import React, { useState } from 'react';
 import { FileSpreadsheet, RefreshCw, Sparkles } from 'lucide-react';
-import FinancialReportsOverview from '@/components/modules/finance/FinancialReportsOverview';
-import CodTransactionTable from '@/components/modules/finance/CodTransactionTable';
-import ExportFinancialReportModal from '@/components/modules/finance/ExportFinancialReportModal';
-import { MOCK_COD_TRANSACTIONS, MOCK_FINANCE_KPIS } from '@/lib/mockFinanceReportsData';
-import { CodTransactionItem, FinanceKPIs } from '@/types/financeReports';
+import FinancialReportsOverview from '../../../../components/modules/finance/FinancialReportsOverview';
+import CodTransactionTable from '../../../../components/modules/finance/CodTransactionTable';
+import ExportFinancialReportModal from '../../../../components/modules/finance/ExportFinancialReportModal';
+import { MOCK_COD_TRANSACTIONS, MOCK_FINANCE_KPIS } from '../../../../lib/mockFinanceReportsData';
+import { CodTransactionItem, FinanceKPIs } from '../../../../types/financeReports';
 
 export default function FinanceReportsPage() {
   const [transactions] = useState<CodTransactionItem[]>(MOCK_COD_TRANSACTIONS);

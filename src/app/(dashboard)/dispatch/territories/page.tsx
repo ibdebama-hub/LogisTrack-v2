@@ -1,8 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
-import ZoneManagement from '@/components/modules/zones/ZoneManagement';
-import AgentAssignmentMatrix from '@/components/modules/zones/AgentAssignmentMatrix';
+import ZoneManagement from '../../../../components/modules/zones/ZoneManagement';
+import AgentAssignmentMatrix from '../../../../components/modules/zones/AgentAssignmentMatrix';
 import { Layers, Users } from 'lucide-react';
 
 export default function DispatchTerritoriesPage() {

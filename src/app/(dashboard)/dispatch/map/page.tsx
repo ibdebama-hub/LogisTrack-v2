@@ -1,5 +1,5 @@
 import React from 'react';
-import OperationalMapCenter from '@/components/modules/maps/OperationalMapCenter';
+import OperationalMapCenter from '../../../../components/modules/maps/OperationalMapCenter';
 
 export const metadata = {
   title: 'Centre de Supervision Cartographique — LogisTrack V2',

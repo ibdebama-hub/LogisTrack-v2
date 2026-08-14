@@ -2,22 +2,22 @@
 
 import React, { useState } from 'react';
 import { Settings, Building, MessageSquare, Users, Sparkles, CheckCircle2 } from 'lucide-react';
-import OrganizationSettings from '@/components/modules/settings/OrganizationSettings';
-import SmsGatewayConfig from '@/components/modules/settings/SmsGatewayConfig';
-import UserRolesManagement from '@/components/modules/settings/UserRolesManagement';
-import InviteUserModal from '@/components/modules/settings/InviteUserModal';
+import OrganizationSettings from '../../../components/modules/settings/OrganizationSettings';
+import SmsGatewayConfig from '../../../components/modules/settings/SmsGatewayConfig';
+import UserRolesManagement from '../../../components/modules/settings/UserRolesManagement';
+import InviteUserModal from '../../../components/modules/settings/InviteUserModal';
 import {
   MOCK_ORGANIZATION_PROFILE,
   MOCK_SMS_GATEWAYS,
   MOCK_SMS_TEMPLATES,
   MOCK_SYSTEM_USERS
-} from '@/lib/mockSettingsData';
+} from '../../../lib/mockSettingsData';
 import {
   OrganizationProfile,
   SmsGatewayConfigModel,
   SmsTemplate,
   SystemUser
-} from '@/types/settings';
+} from '../../../types/settings';
 
 export default function SettingsPage() {
   const [activeTab, setActiveTab] = useState<'org' | 'sms' | 'users'>('org');

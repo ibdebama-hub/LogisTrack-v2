@@ -2,8 +2,8 @@
 
 import React from 'react';
 import { Sliders, Plus, CheckCircle2, ShieldCheck } from 'lucide-react';
-import MissionTemplateEditor from '@/components/modules/settings/MissionTemplateEditor';
-import { useMissionTemplates } from '@/hooks/useMissionTemplates';
+import MissionTemplateEditor from '../../../../components/modules/settings/MissionTemplateEditor';
+import { useMissionTemplates } from '../../../../hooks/useMissionTemplates';
 
 export default function MissionTemplatesSettingsPage() {
   const {

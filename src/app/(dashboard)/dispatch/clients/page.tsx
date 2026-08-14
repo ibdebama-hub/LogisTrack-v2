@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import ClientListTable from '@/components/modules/clients/ClientListTable';
+import ClientListTable from '../../../../components/modules/clients/ClientListTable';
 
 export default function DispatchClientsPage() {
   return (

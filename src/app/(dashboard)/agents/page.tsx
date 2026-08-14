@@ -2,12 +2,12 @@
 
 import React, { useState } from 'react';
 import { ShieldCheck, RefreshCw, Radio, Sparkles } from 'lucide-react';
-import AgentStatusCard from '@/components/modules/agents/AgentStatusCard';
-import AgentFleetTable from '@/components/modules/agents/AgentFleetTable';
-import AgentFormModal from '@/components/modules/agents/AgentFormModal';
-import AgentDetailDrawer from '@/components/modules/agents/AgentDetailDrawer';
-import { MOCK_FLEET_AGENTS } from '@/lib/mockAgentsData';
-import { FleetAgentFull } from '@/types/agentFleet';
+import AgentStatusCard from '../../../components/modules/agents/AgentStatusCard';
+import AgentFleetTable from '../../../components/modules/agents/AgentFleetTable';
+import AgentFormModal from '../../../components/modules/agents/AgentFormModal';
+import AgentDetailDrawer from '../../../components/modules/agents/AgentDetailDrawer';
+import { MOCK_FLEET_AGENTS } from '../../../lib/mockAgentsData';
+import { FleetAgentFull } from '../../../types/agentFleet';
 
 export default function AgentFleetPage() {
   const [agentsList, setAgentsList] = useState<FleetAgentFull[]>(MOCK_FLEET_AGENTS);

@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import MissionControlHub from '@/components/modules/dispatch/MissionControlHub';
+import MissionControlHub from '../../../components/modules/dispatch/MissionControlHub';
 
 export default function DispatchMissionControlPage() {
   return (

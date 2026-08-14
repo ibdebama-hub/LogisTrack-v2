@@ -2,11 +2,11 @@
 
 import React, { useState } from 'react';
 import { Layers, RefreshCw, Sparkles, CheckCircle2, AlertCircle } from 'lucide-react';
-import CampaignsListTable from '@/components/modules/campaigns/CampaignsListTable';
-import CampaignDetailView from '@/components/modules/campaigns/CampaignDetailView';
-import CreateCampaignModal from '@/components/modules/campaigns/CreateCampaignModal';
-import { MOCK_CAMPAIGNS } from '@/lib/mockCampaignsData';
-import { CampaignItem } from '@/types/campaigns';
+import CampaignsListTable from '../../../../components/modules/campaigns/CampaignsListTable';
+import CampaignDetailView from '../../../../components/modules/campaigns/CampaignDetailView';
+import CreateCampaignModal from '../../../../components/modules/campaigns/CreateCampaignModal';
+import { MOCK_CAMPAIGNS } from '../../../../lib/mockCampaignsData';
+import { CampaignItem } from '../../../../types/campaigns';
 
 export default function CampaignsPage() {
   const [campaigns, setCampaigns] = useState<CampaignItem[]>(MOCK_CAMPAIGNS);

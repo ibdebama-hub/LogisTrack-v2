@@ -1,9 +1,9 @@
 'use client';
 
 import React, { useState } from 'react';
-import MassImportModal from '@/components/modules/dispatch/MassImportModal';
-import BatchAssignment from '@/components/modules/dispatch/BatchAssignment';
-import { ImportedRow } from '@/types/logistrack';
+import MassImportModal from '../../../../components/modules/dispatch/MassImportModal';
+import BatchAssignment from '../../../../components/modules/dispatch/BatchAssignment';
+import { ImportedRow } from '../../../../types/logistrack';
 import { UploadCloud } from 'lucide-react';
 
 const INITIAL_DEMO_ROWS: ImportedRow[] = [

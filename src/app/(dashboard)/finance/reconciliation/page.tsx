@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import CodReconciliation from '@/components/modules/finance/CodReconciliation';
+import CodReconciliation from '../../../../components/modules/finance/CodReconciliation';
 
 export default function FinanceReconciliationPage() {
   return (

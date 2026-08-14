@@ -2,8 +2,8 @@
 
 import React from 'react';
 import { ShieldCheck, FileCheck, AlertTriangle, CheckCircle2, Clock, RefreshCw, Search } from 'lucide-react';
-import PoDGalleryGrid from '@/components/modules/pod/PoDGalleryGrid';
-import { usePoDEnterprise } from '@/hooks/usePoDEnterprise';
+import PoDGalleryGrid from '../../../../components/modules/pod/PoDGalleryGrid';
+import { usePoDEnterprise } from '../../../../hooks/usePoDEnterprise';
 
 export default function PoDVerificationsPage() {
   const {

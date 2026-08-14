@@ -1,5 +1,5 @@
 import React from 'react';
-import MissionsExplorerTable from '@/components/modules/dispatch/MissionsExplorerTable';
+import MissionsExplorerTable from '../../../../components/modules/dispatch/MissionsExplorerTable';
 
 export const metadata = {
   title: 'Explorateur de Missions — LogisTrack V2',

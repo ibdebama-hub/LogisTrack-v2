@@ -1,12 +1,12 @@
 'use client';
 
 import React from 'react';
-import BiExecutiveDashboard from '@/components/modules/analytics/BiExecutiveDashboard';
-import BiScorecardGrid from '@/components/modules/analytics/BiScorecardGrid';
-import BiComparatorView from '@/components/modules/analytics/BiComparatorView';
-import BiCartoAnalytics from '@/components/modules/analytics/BiCartoAnalytics';
-import BiAlertEngine from '@/components/modules/analytics/BiAlertEngine';
-import { useBusinessIntelligence } from '@/hooks/useBusinessIntelligence';
+import BiExecutiveDashboard from '../../../components/modules/analytics/BiExecutiveDashboard';
+import BiScorecardGrid from '../../../components/modules/analytics/BiScorecardGrid';
+import BiComparatorView from '../../../components/modules/analytics/BiComparatorView';
+import BiCartoAnalytics from '../../../components/modules/analytics/BiCartoAnalytics';
+import BiAlertEngine from '../../../components/modules/analytics/BiAlertEngine';
+import { useBusinessIntelligence } from '../../../hooks/useBusinessIntelligence';
 
 export default function BusinessIntelligencePage() {
   const {
