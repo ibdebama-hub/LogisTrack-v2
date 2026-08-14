@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { updateAgentGpsPosition } from '@/lib/services/agentService';
+import { updateAgentGpsPosition } from '../lib/services/agentService';
 
 export function useGpsTracker(agentId: string = 'a1', isTrackingActive: boolean = true) {
   const [position, setPosition] = useState<{ lat: number; lng: number } | null>({

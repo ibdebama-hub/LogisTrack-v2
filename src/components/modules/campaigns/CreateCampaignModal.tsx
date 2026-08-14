@@ -2,8 +2,8 @@
 
 import React, { useState } from 'react';
 import { X, Layers, Plus, Calendar, Building2, CheckCircle2, AlertCircle } from 'lucide-react';
-import { CampaignItem, CampaignStatus } from '@/types/campaigns';
-import { OperationType } from '@/types/logistrack';
+import { CampaignItem, CampaignStatus } from '../../../types/campaigns';
+import { OperationType } from '../../../types/logistrack';
 
 interface CreateCampaignModalProps {
   isOpen: boolean;

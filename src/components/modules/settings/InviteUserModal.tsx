@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { X, UserPlus, Mail, Phone, ShieldCheck, MapPin, Key } from 'lucide-react';
-import { SystemUser, UserSystemRole } from '@/types/settings';
+import { SystemUser, UserSystemRole } from '../../../types/settings';
 
 interface InviteUserModalProps {
   isOpen: boolean;

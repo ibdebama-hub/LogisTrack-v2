@@ -1,4 +1,4 @@
-import { OperationType, PoDType } from '@/types/logistrack';
+import { OperationType, PoDType } from './logistrack';
 
 export type PoDVerificationStatus = 'PENDING' | 'APPROVED' | 'REJECTED' | 'ANOMALY';
 

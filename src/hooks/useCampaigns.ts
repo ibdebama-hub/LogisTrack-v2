@@ -1,8 +1,8 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
-import { fetchCampaigns, createCampaign, CreateCampaignDTO } from '@/lib/services/campaignService';
-import { CampaignItem } from '@/types/campaigns';
+import { fetchCampaigns, createCampaign, CreateCampaignDTO } from '../lib/services/campaignService';
+import { CampaignItem } from '../types/campaigns';
 
 export function useCampaigns(organizationId: string = 'tenant-101') {
   const [campaigns, setCampaigns] = useState<CampaignItem[]>([]);

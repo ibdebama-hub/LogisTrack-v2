@@ -1,4 +1,4 @@
-import { OrganizationProfile, SmsGatewayConfigModel, SmsTemplate, SystemUser } from '@/types/settings';
+import { OrganizationProfile, SmsGatewayConfigModel, SmsTemplate, SystemUser } from '../types/settings';
 
 export const MOCK_ORGANIZATION_PROFILE: OrganizationProfile = {
   company_name: 'Logistics West Africa (LogisTrack V2)',

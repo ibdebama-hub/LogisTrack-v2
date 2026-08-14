@@ -5,7 +5,7 @@ import {
   transitionMissionStatus,
   createMissionIncident,
   postMissionComment
-} from '@/lib/services/missionService';
+} from '../lib/services/missionService';
 import {
   Mission,
   MissionStatus,
@@ -14,7 +14,7 @@ import {
   MissionHistoryEntry,
   MissionIncident,
   MissionComment
-} from '@/types/mission';
+} from '../types/mission';
 
 export function useMissionDetail(initialMission: Mission | null) {
   const [mission, setMission] = useState<Mission | null>(initialMission);

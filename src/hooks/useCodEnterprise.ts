@@ -4,14 +4,14 @@ import { useState, useEffect, useCallback } from 'react';
 import {
   fetchCodPaymentsPaged,
   reconcileCodPaymentRecord
-} from '@/lib/services/codEnterpriseService';
-import { generateCodDigitalReceipt } from '@/lib/services/codReceiptService';
+} from '../lib/services/codEnterpriseService';
+import { generateCodDigitalReceipt } from '../lib/services/codReceiptService';
 import {
   CodPaymentEnterprise,
   CodKpisEnterprise,
   CodPaymentMethod
-} from '@/types/codEnterprise';
-import { MOCK_COD_KPIS } from '@/lib/services/codEnterpriseService';
+} from '../types/codEnterprise';
+import { MOCK_COD_KPIS } from '../lib/services/codEnterpriseService';
 
 export function useCodEnterprise(organizationId: string = 'tenant-101') {
   const [payments, setPayments] = useState<CodPaymentEnterprise[]>([]);

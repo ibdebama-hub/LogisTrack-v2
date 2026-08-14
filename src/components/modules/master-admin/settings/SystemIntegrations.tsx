@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { Key, Server, Mail, ShieldCheck, CheckCircle2 } from 'lucide-react';
-import { SystemIntegrationsConfig } from '@/types/masterSettings';
+import { SystemIntegrationsConfig } from '../../../../types/masterSettings';
 
 interface SystemIntegrationsProps {
   config: SystemIntegrationsConfig;

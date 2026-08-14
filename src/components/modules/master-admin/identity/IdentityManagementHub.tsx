@@ -17,8 +17,8 @@ import {
   X,
   UserCog
 } from 'lucide-react';
-import { useTenantOnboarding } from '@/hooks/useTenantOnboarding';
-import { UserSecurityProfile } from '@/types/saasOnboarding';
+import { useTenantOnboarding } from '../../../../hooks/useTenantOnboarding';
+import { UserSecurityProfile } from '../../../../types/saasOnboarding';
 
 export default function IdentityManagementHub() {
   const { userProfiles, toggleUserLock, forcePasswordReset } = useTenantOnboarding();

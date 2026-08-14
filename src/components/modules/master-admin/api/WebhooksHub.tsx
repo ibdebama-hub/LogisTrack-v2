@@ -2,8 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import { Webhook, Plus, CheckCircle2, AlertTriangle, Send, RefreshCw } from 'lucide-react';
-import { WebhookEndpoint, WebhookDeliveryLog } from '@/types/webhooks';
-import { WebhookService } from '@/lib/services/webhookService';
+import { WebhookEndpoint, WebhookDeliveryLog } from '../../../../types/webhooks';
+import { WebhookService } from '../../../../lib/services/webhookService';
 
 export default function WebhooksHub() {
   const [endpoints, setEndpoints] = useState<WebhookEndpoint[]>([]);

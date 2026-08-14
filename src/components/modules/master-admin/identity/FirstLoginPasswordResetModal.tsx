@@ -11,7 +11,7 @@ import {
   Check,
   X
 } from 'lucide-react';
-import { CredentialService } from '@/lib/services/credentialService';
+import { CredentialService } from '../../../../lib/services/credentialService';
 
 interface FirstLoginPasswordResetModalProps {
   userEmail: string;

@@ -10,10 +10,10 @@ import {
   fetchPlatformAudits,
   fetchSupportTickets,
   MOCK_SAAS_MONITORING
-} from '@/lib/services/saasPlatformService';
-import { generateSaaSInvoicePdf } from '@/lib/services/saasBillingService';
-import { DEFAULT_FEATURE_FLAGS } from '@/lib/services/featureFlagService';
-import { MOCK_API_KEYS, generateNewApiKey } from '@/lib/services/apiManagementService';
+} from '../lib/services/saasPlatformService';
+import { generateSaaSInvoicePdf } from '../lib/services/saasBillingService';
+import { DEFAULT_FEATURE_FLAGS } from '../lib/services/featureFlagService';
+import { MOCK_API_KEYS, generateNewApiKey } from '../lib/services/apiManagementService';
 import {
   PlatformMonitoringKpis,
   SaaSTenant,
@@ -24,7 +24,7 @@ import {
   SupportTicket,
   FeatureFlagItem,
   ApiKeyItem
-} from '@/types/saasPlatform';
+} from '../types/saasPlatform';
 
 export function usePlatformManagement() {
   const [kpis, setKpis] = useState<PlatformMonitoringKpis>(MOCK_SAAS_MONITORING);

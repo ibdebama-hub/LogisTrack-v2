@@ -2,8 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import { Activity, AlertTriangle, ShieldAlert, CheckCircle2, RefreshCw, Send } from 'lucide-react';
-import { TrialTelemetry } from '@/types/crm';
-import { TrialManagementService } from '@/lib/services/trialManagementService';
+import { TrialTelemetry } from '../../../../types/crm';
+import { TrialManagementService } from '../../../../lib/services/trialManagementService';
 
 export default function TrialManagementRadar() {
   const [trials, setTrials] = useState<TrialTelemetry[]>([]);

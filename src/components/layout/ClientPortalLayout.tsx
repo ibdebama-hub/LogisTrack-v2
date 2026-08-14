@@ -11,7 +11,7 @@ import {
   Bell
 } from 'lucide-react';
 import ClientPortalSidebar from './ClientPortalSidebar';
-import { MOCK_CLIENT_PORTAL_USERS } from '@/lib/mockClientPortalData';
+import { MOCK_CLIENT_PORTAL_USERS } from '../../lib/mockClientPortalData';
 
 export default function ClientPortalLayout({ children }: { children: React.ReactNode }) {
   const [isCollapsed, setIsCollapsed] = useState(false);

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Users, Truck, WifiOff, BatteryCharging, AlertTriangle, CheckCircle2 } from 'lucide-react';
-import { FleetAgentFull } from '@/types/agentFleet';
+import { FleetAgentFull } from '../../../types/agentFleet';
 
 interface AgentStatusCardProps {
   agents: FleetAgentFull[];

@@ -1,4 +1,4 @@
-import { UserSecurityProfile, UserSecurityStatus } from '@/types/saasOnboarding';
+import { UserSecurityProfile, UserSecurityStatus } from '../../types/saasOnboarding';
 import { CredentialService } from './credentialService';
 import { auditLogService } from './auditLogService';
 

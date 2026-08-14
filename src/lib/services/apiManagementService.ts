@@ -1,4 +1,4 @@
-import { ApiKeyItem } from '@/types/saasPlatform';
+import { ApiKeyItem } from '../../types/saasPlatform';
 
 export const MOCK_API_KEYS: ApiKeyItem[] = [
   {

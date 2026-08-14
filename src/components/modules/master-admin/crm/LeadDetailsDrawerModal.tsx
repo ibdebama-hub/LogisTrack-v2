@@ -2,8 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import { Building2, User, Phone, Mail, Globe, Clock, MessageSquare, Plus, CheckCircle2, X } from 'lucide-react';
-import { Lead, InteractionLog } from '@/types/crm';
-import { CrmService } from '@/lib/services/crmService';
+import { Lead, InteractionLog } from '../../../../types/crm';
+import { CrmService } from '../../../../lib/services/crmService';
 
 interface LeadDetailsDrawerModalProps {
   lead: Lead | null;

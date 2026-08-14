@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { Users, UserPlus, Shield, CheckCircle2, XCircle, Mail } from 'lucide-react';
-import { B2BClientUser, B2BClientRole } from '@/types/b2bClientPortal';
+import { B2BClientUser, B2BClientRole } from '../../../types/b2bClientPortal';
 
 interface ClientUserManagerProps {
   users: B2BClientUser[];

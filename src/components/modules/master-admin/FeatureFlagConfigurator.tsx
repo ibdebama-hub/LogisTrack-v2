@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { ToggleLeft, ToggleRight, Sliders, ShieldCheck } from 'lucide-react';
-import { FeatureFlagItem } from '@/types/saasPlatform';
+import { FeatureFlagItem } from '../../../types/saasPlatform';
 
 interface FeatureFlagConfiguratorProps {
   flags: FeatureFlagItem[];

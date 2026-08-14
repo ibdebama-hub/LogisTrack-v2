@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { X, Building2, Gem, CheckCircle2, ShieldAlert, Key, DollarSign } from 'lucide-react';
-import { TenantCompany, SubscriptionPlanType, SubscriptionStatus, BillingCycle } from '@/types/masterAdmin';
+import { TenantCompany, SubscriptionPlanType, SubscriptionStatus, BillingCycle } from '../../../types/masterAdmin';
 
 interface TenantConfigModalProps {
   isOpen: boolean;

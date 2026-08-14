@@ -1,4 +1,4 @@
-import { MissionTemplate } from '@/types/missionTemplate';
+import { MissionTemplate } from '../../types/missionTemplate';
 
 export interface ProofExecutionPayload {
   has_recipient_signature?: boolean;

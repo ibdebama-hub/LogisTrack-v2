@@ -1,4 +1,4 @@
-import { CodTransactionItem, FinanceKPIs } from '@/types/financeReports';
+import { CodTransactionItem, FinanceKPIs } from '../types/financeReports';
 
 export const MOCK_COD_TRANSACTIONS: CodTransactionItem[] = [
   {

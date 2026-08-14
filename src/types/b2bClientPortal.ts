@@ -1,4 +1,4 @@
-import { PoDType, OperationType } from '@/types/logistrack';
+import { PoDType, OperationType } from './logistrack';
 
 export type B2BClientRole =
   | 'CLIENT_ADMIN'

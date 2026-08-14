@@ -13,9 +13,9 @@ import {
   ArrowRight,
   ShieldCheck
 } from 'lucide-react';
-import { MissionTemplate } from '@/types/missionTemplate';
-import { resolveMissionWorkflowSteps } from '@/lib/services/missionWorkflowEngine';
-import { validateMissionExecutionProof } from '@/lib/services/missionValidationEngine';
+import { MissionTemplate } from '../../../types/missionTemplate';
+import { resolveMissionWorkflowSteps } from '../../../lib/services/missionWorkflowEngine';
+import { validateMissionExecutionProof } from '../../../lib/services/missionValidationEngine';
 
 interface AgentFieldExecutionViewProps {
   template: MissionTemplate;

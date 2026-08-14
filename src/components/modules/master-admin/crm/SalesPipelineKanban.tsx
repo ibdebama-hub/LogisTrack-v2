@@ -2,8 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import { Kanban, Sparkles, Building2, UserCheck, ShieldCheck, ChevronRight, CheckCircle2 } from 'lucide-react';
-import { Lead, LeadStage } from '@/types/crm';
-import { CrmService } from '@/lib/services/crmService';
+import { Lead, LeadStage } from '../../../../types/crm';
+import { CrmService } from '../../../../lib/services/crmService';
 
 const PIPELINE_COLUMNS: { id: LeadStage; title: string; color: string }[] = [
   { id: 'NEW', title: 'Nouveau Prospect', color: 'border-indigo-500 text-indigo-400' },

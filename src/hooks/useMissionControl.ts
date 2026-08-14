@@ -5,7 +5,7 @@ import { useBatches } from './useBatches';
 import { useCampaigns } from './useCampaigns';
 import { useOperationalTimeline } from './useOperationalTimeline';
 import { useNotifications } from './useNotifications';
-import { MOCK_MISSION_CONTROL_KPIS } from '@/lib/mockMissionControlData';
+import { MOCK_MISSION_CONTROL_KPIS } from '../lib/mockMissionControlData';
 
 export function useMissionControl(organizationId: string = 'tenant-101') {
   const { kpis, isLoading: isKpisLoading, refreshKPIs } = useDispatcherKPIs(organizationId);

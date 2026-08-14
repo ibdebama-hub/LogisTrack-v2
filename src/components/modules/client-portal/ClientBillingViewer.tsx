@@ -2,9 +2,9 @@
 
 import React, { useState, useEffect } from 'react';
 import { FileText, Download, CheckCircle2, Clock, DollarSign, Printer, Sparkles } from 'lucide-react';
-import { MOCK_CLIENT_INVOICES } from '@/lib/mockClientPortalData';
-import { ClientInvoiceSummary } from '@/types/b2bClientPortal';
-import { useRealtimeSync } from '@/hooks/useRealtimeSync';
+import { MOCK_CLIENT_INVOICES } from '../../../lib/mockClientPortalData';
+import { ClientInvoiceSummary } from '../../../types/b2bClientPortal';
+import { useRealtimeSync } from '../../../hooks/useRealtimeSync';
 
 export default function ClientBillingViewer() {
   const [invoiceList, setInvoiceList] = useState<ClientInvoiceSummary[]>(MOCK_CLIENT_INVOICES);

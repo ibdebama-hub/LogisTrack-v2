@@ -1,4 +1,4 @@
-import { IntegrationConnector } from '@/types/integrations';
+import { IntegrationConnector } from '../../types/integrations';
 
 export class IntegrationService {
   private static connectors: IntegrationConnector[] = [

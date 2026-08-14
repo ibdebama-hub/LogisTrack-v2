@@ -19,7 +19,7 @@ import {
   Phone,
   ShieldCheck
 } from 'lucide-react';
-import { ClientPortalUser } from '@/types/b2bClientPortal';
+import { ClientPortalUser } from '../../types/b2bClientPortal';
 
 interface ClientPortalSidebarProps {
   isCollapsed: boolean;

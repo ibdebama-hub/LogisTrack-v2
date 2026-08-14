@@ -18,7 +18,7 @@ import {
   ShieldCheck,
   ChevronRight
 } from 'lucide-react';
-import { DispatchLot, LotStatus, LotPriority } from '@/types/missionControl';
+import { DispatchLot, LotStatus, LotPriority } from '../../../types/missionControl';
 
 interface MissionControlKanbanProps {
   lots: DispatchLot[];

@@ -1,4 +1,4 @@
-import { PredictiveFeatureVector } from '@/types/biAnalytics';
+import { PredictiveFeatureVector } from '../../types/biAnalytics';
 
 export function extractPredictiveFeatures(missionId: string): PredictiveFeatureVector {
   // Feature Extractor for ML inference

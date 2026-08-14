@@ -13,8 +13,8 @@ import {
   Sparkles,
   PieChart
 } from 'lucide-react';
-import { SalesKpis, Lead } from '@/types/crm';
-import { CrmService } from '@/lib/services/crmService';
+import { SalesKpis, Lead } from '../../../../types/crm';
+import { CrmService } from '../../../../lib/services/crmService';
 import Link from 'next/link';
 
 export default function CrmDashboardOverview() {

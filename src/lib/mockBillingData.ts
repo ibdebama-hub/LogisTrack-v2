@@ -1,4 +1,4 @@
-import { ClientRateConfig, B2BInvoice } from '@/types/b2bBilling';
+import { ClientRateConfig, B2BInvoice } from '../types/b2bBilling';
 
 export const MOCK_CLIENT_RATES: ClientRateConfig[] = [
   {

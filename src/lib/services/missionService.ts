@@ -1,5 +1,5 @@
-import { supabase } from '@/lib/supabase/queries';
-import { MOCK_DETAILED_MISSIONS, MOCK_MISSIONS_KPIS } from '@/lib/mockMissionsData';
+import { supabase } from '../supabase/queries';
+import { MOCK_DETAILED_MISSIONS, MOCK_MISSIONS_KPIS } from '../mockMissionsData';
 import {
   Mission,
   MissionKpis,
@@ -7,7 +7,7 @@ import {
   IncidentType,
   IncidentSeverity,
   DocumentType
-} from '@/types/mission';
+} from '../../types/mission';
 
 export interface FetchMissionsOptions {
   organizationId?: string;

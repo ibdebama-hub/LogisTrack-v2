@@ -12,7 +12,7 @@ import {
   FileCheck,
   TrendingUp
 } from 'lucide-react';
-import { OperationalTimelineEvent } from '@/types/missionControl';
+import { OperationalTimelineEvent } from '../../../types/missionControl';
 
 interface OperationalTimelineProps {
   events: OperationalTimelineEvent[];

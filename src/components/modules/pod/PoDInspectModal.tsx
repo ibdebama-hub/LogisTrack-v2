@@ -17,7 +17,7 @@ import {
   Key,
   BadgeCheck
 } from 'lucide-react';
-import { PoDItem } from '@/types/podValidation';
+import { PoDItem } from '../../../types/podValidation';
 
 interface PoDInspectModalProps {
   item: PoDItem | null;

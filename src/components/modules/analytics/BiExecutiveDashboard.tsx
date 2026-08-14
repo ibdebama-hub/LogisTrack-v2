@@ -14,7 +14,7 @@ import {
   Layers,
   AlertTriangle
 } from 'lucide-react';
-import { BiExecutiveKpis, BiRoleView } from '@/types/biAnalytics';
+import { BiExecutiveKpis, BiRoleView } from '../../../types/biAnalytics';
 
 interface BiExecutiveDashboardProps {
   kpis: BiExecutiveKpis;

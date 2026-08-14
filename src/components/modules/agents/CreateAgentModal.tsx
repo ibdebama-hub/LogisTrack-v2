@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { X, UserPlus, Shield, Phone, Mail, MapPin, Bike, Car, Layers, Footprints, Key } from 'lucide-react';
-import { FleetAgentFull, VehicleType } from '@/types/agentFleet';
+import { FleetAgentFull, VehicleType } from '../../../types/agentFleet';
 
 interface CreateAgentModalProps {
   isOpen: boolean;

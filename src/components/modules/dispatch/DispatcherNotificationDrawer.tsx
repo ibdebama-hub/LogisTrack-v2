@@ -12,7 +12,7 @@ import {
   Trash2,
   Check
 } from 'lucide-react';
-import { DispatcherNotification, NotificationSeverity } from '@/types/missionControl';
+import { DispatcherNotification, NotificationSeverity } from '../../../types/missionControl';
 
 interface DispatcherNotificationDrawerProps {
   isOpen: boolean;

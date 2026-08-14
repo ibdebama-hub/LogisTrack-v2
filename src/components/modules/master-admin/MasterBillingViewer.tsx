@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { FileText, CheckCircle2, Clock, Mail, Printer, AlertTriangle } from 'lucide-react';
-import { MOCK_TENANTS } from '@/lib/mockMasterAdminData';
+import { MOCK_TENANTS } from '../../../lib/mockMasterAdminData';
 
 export default function MasterBillingViewer() {
   const tenants = MOCK_TENANTS;

@@ -5,8 +5,8 @@ import {
   fetchMissionTemplates,
   saveMissionTemplate,
   PRESET_MISSION_TEMPLATES
-} from '@/lib/services/missionTemplateService';
-import { MissionTemplate } from '@/types/missionTemplate';
+} from '../lib/services/missionTemplateService';
+import { MissionTemplate } from '../types/missionTemplate';
 
 export function useMissionTemplates(organizationId: string = 'tenant-101') {
   const [templates, setTemplates] = useState<MissionTemplate[]>(PRESET_MISSION_TEMPLATES);

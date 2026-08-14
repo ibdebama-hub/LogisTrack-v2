@@ -8,15 +8,15 @@ import {
   MOCK_BI_SCORECARDS,
   MOCK_BI_ALERTS,
   MOCK_BI_COMPARISON
-} from '@/lib/services/biService';
-import { exportBiReport } from '@/lib/services/biReportEngine';
+} from '../lib/services/biService';
+import { exportBiReport } from '../lib/services/biReportEngine';
 import {
   BiExecutiveKpis,
   BiScorecardItem,
   BiAlertRule,
   BiRoleView,
   BiComparisonResult
-} from '@/types/biAnalytics';
+} from '../types/biAnalytics';
 
 export function useBusinessIntelligence(organizationId: string = 'tenant-101') {
   const [kpis, setKpis] = useState<BiExecutiveKpis>(MOCK_BI_KPIS);

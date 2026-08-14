@@ -1,6 +1,6 @@
-import { supabase } from '@/lib/supabase/queries';
-import { MOCK_DISPATCH_LOTS } from '@/lib/mockMissionControlData';
-import { DispatchLot, LotStatus } from '@/types/missionControl';
+import { supabase } from '../supabase/queries';
+import { MOCK_DISPATCH_LOTS } from '../mockMissionControlData';
+import { DispatchLot, LotStatus } from '../../types/missionControl';
 
 export async function fetchDispatchLots(
   organizationId: string = 'tenant-101'

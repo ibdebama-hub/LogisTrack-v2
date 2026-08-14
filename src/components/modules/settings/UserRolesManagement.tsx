@@ -15,7 +15,7 @@ import {
   Key,
   ShieldAlert
 } from 'lucide-react';
-import { SystemUser, UserSystemRole } from '@/types/settings';
+import { SystemUser, UserSystemRole } from '../../../types/settings';
 
 interface UserRolesManagementProps {
   users: SystemUser[];

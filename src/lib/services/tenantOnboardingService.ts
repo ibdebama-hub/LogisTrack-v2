@@ -1,4 +1,4 @@
-import { OnboardingWizardData, ProvisioningResult } from '@/types/saasOnboarding';
+import { OnboardingWizardData, ProvisioningResult } from '../../types/saasOnboarding';
 import { InvitationService } from './invitationService';
 import { auditLogService } from './auditLogService';
 

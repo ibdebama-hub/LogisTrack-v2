@@ -1,4 +1,4 @@
-import { GlobalSaaSSettings, SystemIntegrationsConfig } from '@/types/masterSettings';
+import { GlobalSaaSSettings, SystemIntegrationsConfig } from '../types/masterSettings';
 
 export const DEFAULT_GLOBAL_SAAS_SETTINGS: GlobalSaaSSettings = {
   primary_currency: 'XOF',

@@ -12,7 +12,7 @@ import {
   Clock,
   Filter
 } from 'lucide-react';
-import { useTenantOnboarding } from '@/hooks/useTenantOnboarding';
+import { useTenantOnboarding } from '../../../../hooks/useTenantOnboarding';
 
 export default function LoginHistoryViewer() {
   const { loginLogs } = useTenantOnboarding();

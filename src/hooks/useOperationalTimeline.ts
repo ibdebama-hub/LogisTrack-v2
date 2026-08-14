@@ -1,9 +1,9 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
-import { fetchOperationalTimeline, recordOperationalEvent } from '@/lib/services/timelineService';
-import { OperationalTimelineEvent } from '@/types/missionControl';
-import { supabase } from '@/lib/supabase/queries';
+import { fetchOperationalTimeline, recordOperationalEvent } from '../lib/services/timelineService';
+import { OperationalTimelineEvent } from '../types/missionControl';
+import { supabase } from '../lib/supabase/queries';
 
 export function useOperationalTimeline(organizationId: string = 'tenant-101') {
   const [timelineEvents, setTimelineEvents] = useState<OperationalTimelineEvent[]>([]);

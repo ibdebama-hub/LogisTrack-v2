@@ -1,4 +1,4 @@
-import { ApiKey, ApiScope, PublicApiResponse } from '@/types/publicApi';
+import { ApiKey, ApiScope, PublicApiResponse } from '../../types/publicApi';
 import { apiAuditService } from './apiAuditService';
 
 export interface RateLimitStatus {

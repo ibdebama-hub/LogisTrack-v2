@@ -1,4 +1,4 @@
-import { UserLoginLog, SecurityPolicy } from '@/types/saasOnboarding';
+import { UserLoginLog, SecurityPolicy } from '../../types/saasOnboarding';
 
 const MOCK_LOGIN_LOGS: UserLoginLog[] = [
   {

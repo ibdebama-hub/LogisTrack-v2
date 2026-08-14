@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { LifeBuoy, AlertTriangle, CheckCircle2, Clock } from 'lucide-react';
-import { SupportTicket } from '@/types/saasPlatform';
+import { SupportTicket } from '../../../types/saasPlatform';
 
 interface SupportTicketHubProps {
   tickets: SupportTicket[];

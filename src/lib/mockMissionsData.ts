@@ -1,4 +1,4 @@
-import { Mission, MissionKpis } from '@/types/mission';
+import { Mission, MissionKpis } from '../types/mission';
 
 export const MOCK_MISSIONS_KPIS: MissionKpis = {
   total: 14500,

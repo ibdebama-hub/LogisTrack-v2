@@ -1,4 +1,4 @@
-import { SaaSInvoice } from '@/types/saasPlatform';
+import { SaaSInvoice } from '../../types/saasPlatform';
 
 export function generateSaaSInvoicePdf(invoice: SaaSInvoice): string {
   const htmlContent = `

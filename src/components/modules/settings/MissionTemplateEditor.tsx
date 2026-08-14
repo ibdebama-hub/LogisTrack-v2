@@ -14,8 +14,8 @@ import {
   RotateCcw,
   Sparkles
 } from 'lucide-react';
-import { MissionTemplate, ProofRequirementLevel } from '@/types/missionTemplate';
-import { resolveMissionWorkflowSteps } from '@/lib/services/missionWorkflowEngine';
+import { MissionTemplate, ProofRequirementLevel } from '../../../types/missionTemplate';
+import { resolveMissionWorkflowSteps } from '../../../lib/services/missionWorkflowEngine';
 
 interface MissionTemplateEditorProps {
   template: MissionTemplate;

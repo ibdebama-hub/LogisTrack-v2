@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { offlineEngine } from '@/lib/services/offlineSyncEngine';
+import { offlineEngine } from '../lib/services/offlineSyncEngine';
 
 export function useOfflineSync() {
   const [isOnline, setIsOnline] = useState<boolean>(true);

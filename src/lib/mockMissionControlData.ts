@@ -4,7 +4,7 @@ import {
   MissionControlKpis,
   OperationalTimelineEvent,
   ReassignmentAuditEntry
-} from '@/types/missionControl';
+} from '../types/missionControl';
 
 export const MOCK_MISSION_CONTROL_KPIS: MissionControlKpis = {
   campaigns: {

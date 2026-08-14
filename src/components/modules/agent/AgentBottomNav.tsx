@@ -4,7 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { LayoutDashboard, Navigation, QrCode, RefreshCw, Bell, Wifi, WifiOff } from 'lucide-react';
-import { useOfflineSync } from '@/hooks/useOfflineSync';
+import { useOfflineSync } from '../../../hooks/useOfflineSync';
 
 export default function AgentBottomNav() {
   const pathname = usePathname();

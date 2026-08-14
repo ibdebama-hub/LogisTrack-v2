@@ -1,7 +1,7 @@
-import { supabase } from '@/lib/supabase/queries';
+import { supabase } from '../supabase/queries';
 import { offlineEngine } from './offlineSyncEngine';
-import { MOCK_DETAILED_MISSIONS } from '@/lib/mockMissionsData';
-import { Mission, MissionStatus } from '@/types/mission';
+import { MOCK_DETAILED_MISSIONS } from '../mockMissionsData';
+import { Mission, MissionStatus } from '../../types/mission';
 
 export async function fetchAgentMissions(
   agentId: string = 'a1',

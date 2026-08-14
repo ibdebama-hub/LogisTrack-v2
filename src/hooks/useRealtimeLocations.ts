@@ -1,8 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { supabase } from '@/lib/supabase/queries';
-import { SupervisionAgent } from '@/types/mapSupervision';
+import { supabase } from '../lib/supabase/queries';
+import { SupervisionAgent } from '../types/mapSupervision';
 
 export function useRealtimeLocations(initialAgents: SupervisionAgent[]) {
   const [agents, setAgents] = useState<SupervisionAgent[]>(initialAgents);

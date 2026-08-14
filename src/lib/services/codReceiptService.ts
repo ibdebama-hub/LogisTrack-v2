@@ -1,4 +1,4 @@
-import { CodPaymentEnterprise } from '@/types/codEnterprise';
+import { CodPaymentEnterprise } from '../../types/codEnterprise';
 
 export function generateCodDigitalReceipt(cod: CodPaymentEnterprise): string {
   const verificationUrl = `${typeof window !== 'undefined' ? window.location.origin : 'https://logistrack.app'}/verify/cod/${cod.cod_number}`;

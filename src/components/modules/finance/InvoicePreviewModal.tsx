@@ -13,7 +13,7 @@ import {
   Package,
   ShieldCheck
 } from 'lucide-react';
-import { B2BInvoice } from '@/types/b2bBilling';
+import { B2BInvoice } from '../../../types/b2bBilling';
 
 interface InvoicePreviewModalProps {
   invoice: B2BInvoice | null;

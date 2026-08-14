@@ -1,4 +1,4 @@
-import { UserRole, PoDType } from '@/types/logistrack';
+import { UserRole, PoDType } from './logistrack';
 
 export type AgentStatus = 'EN_TOURNÉE' | 'EN_PAUSE' | 'DISPONIBLE' | 'HORS_LIGNE';
 

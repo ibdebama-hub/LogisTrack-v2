@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { DollarSign, Building2, Layers, TrendingUp, PieChart, Crown, Zap } from 'lucide-react';
-import { MasterFinancialKPIs } from '@/types/masterAdmin';
+import { MasterFinancialKPIs } from '../../../types/masterAdmin';
 
 interface SaaSFinancialOverviewProps {
   kpis: MasterFinancialKPIs;

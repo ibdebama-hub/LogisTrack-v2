@@ -24,7 +24,7 @@ import {
   FileCheck,
   Map
 } from 'lucide-react';
-import { FleetAgentFull } from '@/types/agentFleet';
+import { FleetAgentFull } from '../../../types/agentFleet';
 
 interface AgentDetailDrawerProps {
   agent: FleetAgentFull | null;

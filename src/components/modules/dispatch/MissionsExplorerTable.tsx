@@ -17,9 +17,9 @@ import {
   SlidersHorizontal,
   Play
 } from 'lucide-react';
-import { useMissions } from '@/hooks/useMissions';
-import { Mission, MissionStatus } from '@/types/mission';
-import { getMissionStatusBadgeStyle, getMissionStatusLabel } from '@/lib/missionWorkflow';
+import { useMissions } from '../../../hooks/useMissions';
+import { Mission, MissionStatus } from '../../../types/mission';
+import { getMissionStatusBadgeStyle, getMissionStatusLabel } from '../../../lib/missionWorkflow';
 import MissionDetailDrawer from './MissionDetailDrawer';
 
 export default function MissionsExplorerTable() {

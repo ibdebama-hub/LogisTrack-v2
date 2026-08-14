@@ -1,4 +1,4 @@
-import { MissionTemplate, MissionWorkflowStep } from '@/types/missionTemplate';
+import { MissionTemplate, MissionWorkflowStep } from '../../types/missionTemplate';
 
 export function resolveMissionWorkflowSteps(template: MissionTemplate): MissionWorkflowStep[] {
   const steps: MissionWorkflowStep[] = [

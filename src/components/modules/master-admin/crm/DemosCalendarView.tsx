@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { Calendar, Video, MapPin, User, CheckCircle2, Clock, Plus } from 'lucide-react';
-import { CommercialDemo } from '@/types/crm';
+import { CommercialDemo } from '../../../../types/crm';
 
 const MOCK_DEMOS: CommercialDemo[] = [
   {

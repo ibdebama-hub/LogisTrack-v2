@@ -1,4 +1,4 @@
-import { Lead } from '@/types/crm';
+import { Lead } from '../../types/crm';
 import { CrmService } from './crmService';
 import { ContractService } from './contractService';
 

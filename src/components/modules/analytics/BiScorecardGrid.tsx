@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Award, CheckCircle2, AlertTriangle, TrendingUp } from 'lucide-react';
-import { BiScorecardItem, BiRating } from '@/types/biAnalytics';
+import { BiScorecardItem, BiRating } from '../../../types/biAnalytics';
 
 interface BiScorecardGridProps {
   scorecards: BiScorecardItem[];

@@ -17,11 +17,11 @@ import {
   Layers,
   Crown
 } from 'lucide-react';
-import { OperationType } from '@/types/logistrack';
-import { downloadCsvTemplate, downloadXlsxTemplate } from '@/utils/clientImportTemplates';
-import { checkOrganizationQuota, QuotaCheckResult } from '@/lib/quotaService';
-import { broadcastCampaignCreated } from '@/lib/supabase/realtime';
-import { CampaignItem } from '@/types/campaigns';
+import { OperationType } from '../../../types/logistrack';
+import { downloadCsvTemplate, downloadXlsxTemplate } from '../../../utils/clientImportTemplates';
+import { checkOrganizationQuota, QuotaCheckResult } from '../../../lib/quotaService';
+import { broadcastCampaignCreated } from '../../../lib/supabase/realtime';
+import { CampaignItem } from '../../../types/campaigns';
 
 export default function ClientFileUpload() {
   const [operationType, setOperationType] = useState<OperationType>('MASS_INVOICE_DISTRIBUTION');

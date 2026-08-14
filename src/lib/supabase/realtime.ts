@@ -1,6 +1,6 @@
 import { supabase } from './queries';
-import { CampaignItem } from '@/types/campaigns';
-import { ClientPoDProof, ClientInvoiceSummary } from '@/types/b2bClientPortal';
+import { CampaignItem } from '../../types/campaigns';
+import { ClientPoDProof, ClientInvoiceSummary } from '../../types/b2bClientPortal';
 
 // Event types for inter-portal synchronization
 export type RealtimeEventType =

@@ -15,7 +15,7 @@ import {
   ShieldAlert,
   ArrowRight
 } from 'lucide-react';
-import { CampaignItem } from '@/types/campaigns';
+import { CampaignItem } from '../../../types/campaigns';
 
 interface CampaignDetailViewProps {
   campaign: CampaignItem | null;

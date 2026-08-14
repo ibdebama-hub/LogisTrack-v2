@@ -2,7 +2,7 @@
 
 import React, { useEffect } from 'react';
 import { Play, Pause, X, RotateCcw, FastForward, Clock } from 'lucide-react';
-import { GpsTrailPoint } from '@/types/mapSupervision';
+import { GpsTrailPoint } from '../../../types/mapSupervision';
 
 interface GpsReplayBarProps {
   agentName: string;

@@ -13,8 +13,8 @@ import {
   FileSpreadsheet,
   FileText
 } from 'lucide-react';
-import { B2BExecutiveKpis, B2BAnalyticsPoint } from '@/types/b2bClientPortal';
-import { ReportFormat } from '@/lib/services/b2bReportGenerator';
+import { B2BExecutiveKpis, B2BAnalyticsPoint } from '../../../types/b2bClientPortal';
+import { ReportFormat } from '../../../lib/services/b2bReportGenerator';
 
 interface ClientExecutiveDashboardProps {
   clientName: string;

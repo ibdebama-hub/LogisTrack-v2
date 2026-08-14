@@ -1,11 +1,11 @@
-import { supabase } from '@/lib/supabase/queries';
+import { supabase } from '../supabase/queries';
 import {
   B2BExecutiveKpis,
   B2BAnalyticsPoint,
   B2BClientUser,
   B2BDocument,
   B2BMessageThread
-} from '@/types/b2bClientPortal';
+} from '../../types/b2bClientPortal';
 
 export const MOCK_B2B_KPIS: B2BExecutiveKpis = {
   active_campaigns: 14,

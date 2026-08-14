@@ -1,4 +1,4 @@
-import { BiExecutiveKpis, BiScorecardItem } from '@/types/biAnalytics';
+import { BiExecutiveKpis, BiScorecardItem } from '../../types/biAnalytics';
 
 export function exportBiReport(
   kpis: BiExecutiveKpis,

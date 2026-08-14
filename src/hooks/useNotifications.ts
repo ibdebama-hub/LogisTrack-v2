@@ -5,9 +5,9 @@ import {
   fetchNotifications,
   markNotificationsAsRead,
   clearAllNotifications
-} from '@/lib/services/notificationService';
-import { DispatcherNotification } from '@/types/missionControl';
-import { supabase } from '@/lib/supabase/queries';
+} from '../lib/services/notificationService';
+import { DispatcherNotification } from '../types/missionControl';
+import { supabase } from '../lib/supabase/queries';
 
 export function useNotifications(organizationId: string = 'tenant-101') {
   const [notifications, setNotifications] = useState<DispatcherNotification[]>([]);

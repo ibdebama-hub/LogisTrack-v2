@@ -21,7 +21,7 @@ import {
   AlertTriangle,
   RotateCcw
 } from 'lucide-react';
-import { FleetAgentFull, VehicleType } from '@/types/agentFleet';
+import { FleetAgentFull, VehicleType } from '../../../types/agentFleet';
 import AgentTerritoryAssignment from './AgentTerritoryAssignment';
 
 interface AgentFormModalProps {

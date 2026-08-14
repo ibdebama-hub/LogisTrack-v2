@@ -22,7 +22,7 @@ import {
   Grid,
   List
 } from 'lucide-react';
-import { PoDItem, PoDVerificationStatus } from '@/types/podValidation';
+import { PoDItem, PoDVerificationStatus } from '../../../types/podValidation';
 
 interface PoDValidationHubProps {
   items: PoDItem[];

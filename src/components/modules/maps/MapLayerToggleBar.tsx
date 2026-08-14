@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Layers, Users, MapPin, Activity, AlertTriangle, Navigation, RotateCcw } from 'lucide-react';
-import { LayerToggles } from '@/types/mapSupervision';
+import { LayerToggles } from '../../../types/mapSupervision';
 
 interface MapLayerToggleBarProps {
   layers: LayerToggles;

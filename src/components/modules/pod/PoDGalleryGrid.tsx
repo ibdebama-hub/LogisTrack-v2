@@ -15,7 +15,7 @@ import {
   Building2,
   Phone
 } from 'lucide-react';
-import { PoDRecordEnterprise } from '@/types/podEnterprise';
+import { PoDRecordEnterprise } from '../../../types/podEnterprise';
 
 interface PoDGalleryGridProps {
   pods: PoDRecordEnterprise[];

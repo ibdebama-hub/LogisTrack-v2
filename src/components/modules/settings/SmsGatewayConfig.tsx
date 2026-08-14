@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { MessageSquare, Send, CheckCircle2, Key, ShieldCheck, Zap, AlertCircle, Edit3, Smartphone, Info } from 'lucide-react';
-import { SmsGatewayConfigModel, SmsTemplate, SmsProviderType } from '@/types/settings';
+import { SmsGatewayConfigModel, SmsTemplate, SmsProviderType } from '../../../types/settings';
 
 interface SmsGatewayConfigProps {
   gateways: SmsGatewayConfigModel[];

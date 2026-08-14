@@ -1,4 +1,4 @@
-import { CampaignItem } from '@/types/campaigns';
+import { CampaignItem } from '../types/campaigns';
 
 export const MOCK_CAMPAIGNS: CampaignItem[] = [
   {

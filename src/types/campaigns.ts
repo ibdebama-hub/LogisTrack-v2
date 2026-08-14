@@ -1,4 +1,4 @@
-import { OperationType } from '@/types/logistrack';
+import { OperationType } from './logistrack';
 
 export type CampaignStatus = 'EN_COURS' | 'PLANIFIÉE' | 'EN_PAUSE' | 'CLÔTURÉE' | 'ARCHIVÉE';
 

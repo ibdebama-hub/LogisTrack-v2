@@ -14,7 +14,7 @@ import {
   TrendingDown,
   Info
 } from 'lucide-react';
-import { ClientRateConfig, PricingModel } from '@/types/b2bBilling';
+import { ClientRateConfig, PricingModel } from '../../../types/b2bBilling';
 
 interface RateMatrixConfigProps {
   rates: ClientRateConfig[];

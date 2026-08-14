@@ -1,6 +1,6 @@
-import { Contract, Lead } from '@/types/crm';
+import { Contract, Lead } from '../../types/crm';
 import { TenantOnboardingService } from './tenantOnboardingService';
-import { ProvisioningResult } from '@/types/saasOnboarding';
+import { ProvisioningResult } from '../../types/saasOnboarding';
 import { CrmService } from './crmService';
 
 export const MOCK_CONTRACTS: Contract[] = [

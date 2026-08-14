@@ -2,9 +2,9 @@
 
 import React, { useState, useEffect } from 'react';
 import { Search, Download, FileCheck, Eye, MapPin, CheckCircle2, ShieldCheck, Printer, X, Sparkles } from 'lucide-react';
-import { MOCK_CLIENT_POD_PROOFS } from '@/lib/mockClientPortalData';
-import { ClientPoDProof } from '@/types/b2bClientPortal';
-import { useRealtimeSync } from '@/hooks/useRealtimeSync';
+import { MOCK_CLIENT_POD_PROOFS } from '../../../lib/mockClientPortalData';
+import { ClientPoDProof } from '../../../types/b2bClientPortal';
+import { useRealtimeSync } from '../../../hooks/useRealtimeSync';
 
 export default function ClientPoDViewer() {
   const [searchTerm, setSearchTerm] = useState('');

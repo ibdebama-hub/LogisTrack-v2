@@ -15,13 +15,13 @@ import {
   ShieldCheck,
   Building2
 } from 'lucide-react';
-import { useOperationalMap } from '@/hooks/useOperationalMap';
+import { useOperationalMap } from '../../../hooks/useOperationalMap';
 import MapLayerToggleBar from './MapLayerToggleBar';
 import MapControlPanelDrawer from './MapControlPanelDrawer';
 import GpsReplayBar from './GpsReplayBar';
 import MissionDetailDrawer from '../dispatch/MissionDetailDrawer';
-import { Mission } from '@/types/mission';
-import { getMissionStatusBadgeStyle, getMissionStatusLabel } from '@/lib/missionWorkflow';
+import { Mission } from '../../../types/mission';
+import { getMissionStatusBadgeStyle, getMissionStatusLabel } from '../../../lib/missionWorkflow';
 
 export default function OperationalMapCenter() {
   const {

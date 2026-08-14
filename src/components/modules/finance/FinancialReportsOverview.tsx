@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { DollarSign, Wallet, Smartphone, ShieldCheck, TrendingUp, PieChart } from 'lucide-react';
-import { FinanceKPIs } from '@/types/financeReports';
+import { FinanceKPIs } from '../../../types/financeReports';
 
 interface FinancialReportsOverviewProps {
   kpis: FinanceKPIs;

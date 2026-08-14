@@ -15,7 +15,7 @@ import {
   Filter
 } from 'lucide-react';
 import OnboardingWizardModal from './OnboardingWizardModal';
-import { useTenantOnboarding } from '@/hooks/useTenantOnboarding';
+import { useTenantOnboarding } from '../../../../hooks/useTenantOnboarding';
 
 export default function OnboardingDashboard() {
   const [isWizardOpen, setIsWizardOpen] = useState(false);

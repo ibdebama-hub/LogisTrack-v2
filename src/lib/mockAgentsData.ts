@@ -1,4 +1,4 @@
-import { FleetAgentFull } from '@/types/agentFleet';
+import { FleetAgentFull } from '../types/agentFleet';
 
 export const MOCK_FLEET_AGENTS: FleetAgentFull[] = [
   {

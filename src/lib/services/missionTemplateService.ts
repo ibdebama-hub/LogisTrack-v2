@@ -1,5 +1,5 @@
-import { supabase } from '@/lib/supabase/queries';
-import { MissionTemplate } from '@/types/missionTemplate';
+import { supabase } from '../supabase/queries';
+import { MissionTemplate } from '../../types/missionTemplate';
 
 export const PRESET_MISSION_TEMPLATES: MissionTemplate[] = [
   {

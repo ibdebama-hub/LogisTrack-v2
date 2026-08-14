@@ -14,7 +14,7 @@ import {
   AlertTriangle,
   LogIn
 } from 'lucide-react';
-import { TenantCompany, SubscriptionPlanType, SubscriptionStatus } from '@/types/masterAdmin';
+import { TenantCompany, SubscriptionPlanType, SubscriptionStatus } from '../../../types/masterAdmin';
 
 interface TenantListTableProps {
   tenants: TenantCompany[];

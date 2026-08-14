@@ -1,4 +1,4 @@
-import { TenantInvitation, InvitationStatus } from '@/types/saasOnboarding';
+import { TenantInvitation, InvitationStatus } from '../../types/saasOnboarding';
 import { CredentialService } from './credentialService';
 import { auditLogService } from './auditLogService';
 

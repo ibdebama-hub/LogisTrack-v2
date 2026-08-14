@@ -14,8 +14,8 @@ import {
   ArrowRight,
   ShieldCheck
 } from 'lucide-react';
-import { OperationType } from '@/types/logistrack';
-import { LotPriority } from '@/types/missionControl';
+import { OperationType } from '../../../types/logistrack';
+import { LotPriority } from '../../../types/missionControl';
 
 interface CreateCampaignWizardModalProps {
   isOpen: boolean;

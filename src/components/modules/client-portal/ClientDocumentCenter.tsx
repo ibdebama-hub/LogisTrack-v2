@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { FileText, Download, Search, Eye, Filter, FolderArchive, ShieldCheck, Banknote } from 'lucide-react';
-import { B2BDocument } from '@/types/b2bClientPortal';
+import { B2BDocument } from '../../../types/b2bClientPortal';
 
 interface ClientDocumentCenterProps {
   documents: B2BDocument[];

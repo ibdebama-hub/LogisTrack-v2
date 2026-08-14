@@ -1,4 +1,4 @@
-import { supabase } from '@/lib/supabase/queries';
+import { supabase } from '../supabase/queries';
 
 export interface SyncQueueItem {
   id: string;

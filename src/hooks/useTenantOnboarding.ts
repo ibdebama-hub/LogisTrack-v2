@@ -5,11 +5,11 @@ import {
   TenantInvitation,
   UserSecurityProfile,
   UserLoginLog
-} from '@/types/saasOnboarding';
-import { TenantOnboardingService } from '@/lib/services/tenantOnboardingService';
-import { InvitationService } from '@/lib/services/invitationService';
-import { IdentityManagementService } from '@/lib/services/identityManagementService';
-import { SecurityPolicyService } from '@/lib/services/securityPolicyService';
+} from '../types/saasOnboarding';
+import { TenantOnboardingService } from '../lib/services/tenantOnboardingService';
+import { InvitationService } from '../lib/services/invitationService';
+import { IdentityManagementService } from '../lib/services/identityManagementService';
+import { SecurityPolicyService } from '../lib/services/securityPolicyService';
 
 export function useTenantOnboarding() {
   const [invitations, setInvitations] = useState<TenantInvitation[]>([]);

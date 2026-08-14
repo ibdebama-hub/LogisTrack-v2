@@ -1,5 +1,5 @@
-import { AutomationRule } from '@/types/automation';
-import { WebhookEventType } from '@/types/webhooks';
+import { AutomationRule } from '../../types/automation';
+import { WebhookEventType } from '../../types/webhooks';
 import { WebhookService } from './webhookService';
 
 export class AutomationEngine {

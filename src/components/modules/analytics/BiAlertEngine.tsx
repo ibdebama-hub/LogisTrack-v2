@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { AlertTriangle, Sparkles, BellRing, CheckCircle2 } from 'lucide-react';
-import { BiAlertRule } from '@/types/biAnalytics';
+import { BiAlertRule } from '../../../types/biAnalytics';
 
 interface BiAlertEngineProps {
   alerts: BiAlertRule[];

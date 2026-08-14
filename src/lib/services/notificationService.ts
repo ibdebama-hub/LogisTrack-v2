@@ -1,6 +1,6 @@
-import { supabase } from '@/lib/supabase/queries';
-import { MOCK_DISPATCHER_NOTIFICATIONS } from '@/lib/mockMissionControlData';
-import { DispatcherNotification } from '@/types/missionControl';
+import { supabase } from '../supabase/queries';
+import { MOCK_DISPATCHER_NOTIFICATIONS } from '../mockMissionControlData';
+import { DispatcherNotification } from '../../types/missionControl';
 
 export async function fetchNotifications(
   organizationId: string = 'tenant-101'

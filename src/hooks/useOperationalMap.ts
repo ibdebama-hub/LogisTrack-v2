@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback } from 'react';
 import {
   fetchSupervisionData,
   fetchAgentReplayTrail
-} from '@/lib/services/mapService';
+} from '../lib/services/mapService';
 import {
   SupervisionAgent,
   SupervisionMission,
@@ -12,7 +12,7 @@ import {
   SupervisionIncident,
   LayerToggles,
   GpsTrailPoint
-} from '@/types/mapSupervision';
+} from '../types/mapSupervision';
 import { useRealtimeLocations } from './useRealtimeLocations';
 
 export function useOperationalMap(organizationId: string = 'tenant-101') {

@@ -1,11 +1,11 @@
-import { supabase } from '@/lib/supabase/queries';
+import { supabase } from '../supabase/queries';
 import {
   SupervisionAgent,
   SupervisionMission,
   SupervisionZone,
   SupervisionIncident,
   GpsTrailPoint
-} from '@/types/mapSupervision';
+} from '../../types/mapSupervision';
 
 export const MOCK_SUPERVISION_AGENTS: SupervisionAgent[] = [
   {

@@ -28,14 +28,14 @@ import {
   MissionStatus,
   IncidentType,
   IncidentSeverity
-} from '@/types/mission';
+} from '../../../types/mission';
 import {
   getMissionStatusBadgeStyle,
   getMissionStatusLabel,
   getAllowedNextStatuses,
   canTransitionMissionStatus
-} from '@/lib/missionWorkflow';
-import { useMissionDetail } from '@/hooks/useMissionDetail';
+} from '../../../lib/missionWorkflow';
+import { useMissionDetail } from '../../../hooks/useMissionDetail';
 
 interface MissionDetailDrawerProps {
   mission: Mission | null;

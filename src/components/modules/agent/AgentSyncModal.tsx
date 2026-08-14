@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { RefreshCw, Wifi, WifiOff, CheckCircle2, AlertCircle, X } from 'lucide-react';
-import { useOfflineSync } from '@/hooks/useOfflineSync';
+import { useOfflineSync } from '../../../hooks/useOfflineSync';
 
 interface AgentSyncModalProps {
   isOpen: boolean;

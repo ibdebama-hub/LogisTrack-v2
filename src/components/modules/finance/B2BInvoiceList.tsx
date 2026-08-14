@@ -16,7 +16,7 @@ import {
   CreditCard,
   Printer
 } from 'lucide-react';
-import { B2BInvoice, InvoiceStatus } from '@/types/b2bBilling';
+import { B2BInvoice, InvoiceStatus } from '../../../types/b2bBilling';
 
 interface B2BInvoiceListProps {
   invoices: B2BInvoice[];

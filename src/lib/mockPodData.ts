@@ -1,4 +1,4 @@
-import { PoDItem } from '@/types/podValidation';
+import { PoDItem } from '../types/podValidation';
 
 // SVG Signatures and Proof Photo placeholders (SVG encoded Data URIs)
 const MOCK_SIGNATURE_SVG = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="150" viewBox="0 0 300 150"><rect width="100%" height="100%" fill="%230f172a"/><path d="M 30 90 Q 70 20, 110 80 T 170 60 T 230 100 Q 260 40, 280 70" stroke="%23818cf8" stroke-width="4" fill="none" stroke-linecap="round"/><circle cx="280" cy="70" r="3" fill="%23818cf8"/><text x="20" y="135" fill="%2364748b" font-size="12" font-family="monospace">CERTIFIED SIGNATURE #POD-8891</text></svg>`;

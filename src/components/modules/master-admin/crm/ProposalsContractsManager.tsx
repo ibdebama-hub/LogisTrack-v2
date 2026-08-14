@@ -2,11 +2,11 @@
 
 import React, { useState, useEffect } from 'react';
 import { FileText, CheckCircle2, Sparkles, Download, ArrowRight, ShieldCheck } from 'lucide-react';
-import { Contract, Lead, CommercialProposal } from '@/types/crm';
-import { ContractService } from '@/lib/services/contractService';
-import { ProposalService } from '@/lib/services/proposalService';
-import { CrmService } from '@/lib/services/crmService';
-import { ProvisioningResult } from '@/types/saasOnboarding';
+import { Contract, Lead, CommercialProposal } from '../../../../types/crm';
+import { ContractService } from '../../../../lib/services/contractService';
+import { ProposalService } from '../../../../lib/services/proposalService';
+import { CrmService } from '../../../../lib/services/crmService';
+import { ProvisioningResult } from '../../../../types/saasOnboarding';
 
 export default function ProposalsContractsManager() {
   const [contracts, setContracts] = useState<Contract[]>([]);

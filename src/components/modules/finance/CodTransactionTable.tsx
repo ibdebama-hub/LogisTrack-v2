@@ -14,7 +14,7 @@ import {
   Building,
   User
 } from 'lucide-react';
-import { CodTransactionItem, PaymentMethod } from '@/types/financeReports';
+import { CodTransactionItem, PaymentMethod } from '../../../types/financeReports';
 
 interface CodTransactionTableProps {
   transactions: CodTransactionItem[];

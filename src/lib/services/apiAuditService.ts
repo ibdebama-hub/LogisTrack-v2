@@ -1,4 +1,4 @@
-import { ApiAuditLogEntry } from '@/types/publicApi';
+import { ApiAuditLogEntry } from '../../types/publicApi';
 
 export class ApiAuditService {
   private static auditLogs: ApiAuditLogEntry[] = [

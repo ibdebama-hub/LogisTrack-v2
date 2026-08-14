@@ -1,7 +1,7 @@
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
 import { cookies, headers } from 'next/headers';
 import { redirect } from 'next/navigation';
-import { UserRole } from '@/middleware';
+import { UserRole } from '../../middleware';
 import { SUPABASE_URL, SUPABASE_ANON_KEY } from './client';
 
 export interface UserAuthContext {

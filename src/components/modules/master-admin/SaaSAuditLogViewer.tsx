@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { History, ShieldCheck, User } from 'lucide-react';
-import { PlatformAuditLog } from '@/types/saasPlatform';
+import { PlatformAuditLog } from '../../../types/saasPlatform';
 
 interface SaaSAuditLogViewerProps {
   audits: PlatformAuditLog[];

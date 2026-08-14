@@ -15,8 +15,8 @@ import {
   Smartphone,
   Wallet
 } from 'lucide-react';
-import { useCodEnterprise } from '@/hooks/useCodEnterprise';
-import { CodPaymentEnterprise } from '@/types/codEnterprise';
+import { useCodEnterprise } from '../../../hooks/useCodEnterprise';
+import { CodPaymentEnterprise } from '../../../types/codEnterprise';
 
 export default function CodReconciliationHub() {
   const {

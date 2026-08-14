@@ -1,9 +1,9 @@
-import { supabase } from '@/lib/supabase/queries';
+import { supabase } from '../supabase/queries';
 import {
   PoDRecordEnterprise,
   PoDKpisEnterprise,
   PoDStatus
-} from '@/types/podEnterprise';
+} from '../../types/podEnterprise';
 
 export const MOCK_ENTERPRISE_PODS: PoDRecordEnterprise[] = [
   {

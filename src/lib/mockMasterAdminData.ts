@@ -1,4 +1,4 @@
-import { TenantCompany, MasterFinancialKPIs } from '@/types/masterAdmin';
+import { TenantCompany, MasterFinancialKPIs } from '../types/masterAdmin';
 
 export const MOCK_TENANTS: TenantCompany[] = [
   {

@@ -9,15 +9,15 @@ import {
   sendB2BMessage,
   MOCK_B2B_KPIS,
   MOCK_B2B_ANALYTICS
-} from '@/lib/services/b2bPortalService';
-import { generateDynamicB2BReport, ReportFormat } from '@/lib/services/b2bReportGenerator';
+} from '../lib/services/b2bPortalService';
+import { generateDynamicB2BReport, ReportFormat } from '../lib/services/b2bReportGenerator';
 import {
   B2BExecutiveKpis,
   B2BAnalyticsPoint,
   B2BClientUser,
   B2BDocument,
   B2BMessageThread
-} from '@/types/b2bClientPortal';
+} from '../types/b2bClientPortal';
 
 export function useB2BPortal(clientId: string = 'cli-cie') {
   const [kpis, setKpis] = useState<B2BExecutiveKpis>(MOCK_B2B_KPIS);

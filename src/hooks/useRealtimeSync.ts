@@ -8,9 +8,9 @@ import {
   broadcastCampaignCreated,
   broadcastPoDCertified,
   broadcastInvoiceIssued,
-} from '@/lib/supabase/realtime';
-import { CampaignItem } from '@/types/campaigns';
-import { ClientPoDProof, ClientInvoiceSummary } from '@/types/b2bClientPortal';
+} from '../lib/supabase/realtime';
+import { CampaignItem } from '../types/campaigns';
+import { ClientPoDProof, ClientInvoiceSummary } from '../types/b2bClientPortal';
 
 export function useRealtimeSync() {
   const [isConnected, setIsConnected] = useState<boolean>(true);

@@ -22,8 +22,8 @@ import {
   Server,
   Users
 } from 'lucide-react';
-import { OnboardingWizardData, ProvisioningResult } from '@/types/saasOnboarding';
-import { MOCK_SAAS_PLANS } from '@/lib/services/saasPlatformService';
+import { OnboardingWizardData, ProvisioningResult } from '../../../../types/saasOnboarding';
+import { MOCK_SAAS_PLANS } from '../../../../lib/services/saasPlatformService';
 
 interface OnboardingWizardModalProps {
   isOpen: boolean;

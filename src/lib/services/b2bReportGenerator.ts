@@ -1,4 +1,4 @@
-import { B2BExecutiveKpis } from '@/types/b2bClientPortal';
+import { B2BExecutiveKpis } from '../../types/b2bClientPortal';
 
 export type ReportFormat = 'PDF' | 'EXCEL' | 'CSV';
 

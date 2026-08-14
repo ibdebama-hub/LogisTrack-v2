@@ -2,8 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import { Layers, Database, ShoppingBag, Smartphone, CheckCircle2, RefreshCw } from 'lucide-react';
-import { IntegrationConnector } from '@/types/integrations';
-import { IntegrationService } from '@/lib/services/integrationService';
+import { IntegrationConnector } from '../../../../types/integrations';
+import { IntegrationService } from '../../../../lib/services/integrationService';
 
 export default function IntegrationConnectorsHub() {
   const [connectors, setConnectors] = useState<IntegrationConnector[]>([]);

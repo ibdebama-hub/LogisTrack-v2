@@ -1,4 +1,4 @@
-import { ClientPortalUser, ClientCampaignSummary, ClientPoDProof, ClientInvoiceSummary } from '@/types/b2bClientPortal';
+import { ClientPortalUser, ClientCampaignSummary, ClientPoDProof, ClientInvoiceSummary } from '../types/b2bClientPortal';
 
 const MOCK_SIGNATURE_SVG = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="150" viewBox="0 0 300 150"><rect width="100%" height="100%" fill="%230f172a"/><path d="M 30 90 Q 70 20, 110 80 T 170 60 T 230 100 Q 260 40, 280 70" stroke="%2338bdf8" stroke-width="4" fill="none" stroke-linecap="round"/><text x="20" y="135" fill="%2394a3b8" font-size="12" font-family="monospace">CLIENT PROOF CERTIFIED #OGN-8841</text></svg>`;
 

@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { Key, Plus, ShieldCheck, Trash2, CheckCircle2 } from 'lucide-react';
-import { ApiKeyItem } from '@/types/saasPlatform';
+import { ApiKeyItem } from '../../../types/saasPlatform';
 
 interface ApiKeysManagerProps {
   apiKeys: ApiKeyItem[];

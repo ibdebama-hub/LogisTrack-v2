@@ -15,7 +15,7 @@ import {
   X
 } from 'lucide-react';
 import CreateClientModal from '../modules/clients/CreateClientModal';
-import { useRealtimeSync } from '@/hooks/useRealtimeSync';
+import { useRealtimeSync } from '../../hooks/useRealtimeSync';
 
 interface TopHeaderProps {
   onOpenMobileMenu: () => void;

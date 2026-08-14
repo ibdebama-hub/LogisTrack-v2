@@ -1,4 +1,4 @@
-import { FeatureFlagItem } from '@/types/saasPlatform';
+import { FeatureFlagItem } from '../../types/saasPlatform';
 
 export const DEFAULT_FEATURE_FLAGS: FeatureFlagItem[] = [
   { id: 'f-1', feature_key: 'MODULE_POD', feature_label: 'Proof of Delivery (POD) Enterprise', is_enabled: true },

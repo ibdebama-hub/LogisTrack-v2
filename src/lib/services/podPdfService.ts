@@ -1,4 +1,4 @@
-import { PoDRecordEnterprise } from '@/types/podEnterprise';
+import { PoDRecordEnterprise } from '../../types/podEnterprise';
 
 export function generatePoDPdfCertificate(pod: PoDRecordEnterprise): string {
   // Generates an official HTML / Data-URI document representing the PoD Certificate

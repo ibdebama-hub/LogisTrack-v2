@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { DollarSign, Globe, Building2, CheckCircle2, ShieldCheck } from 'lucide-react';
-import { GlobalSaaSSettings as GlobalSettingsType } from '@/types/masterSettings';
+import { GlobalSaaSSettings as GlobalSettingsType } from '../../../../types/masterSettings';
 
 interface GlobalSaaSSettingsProps {
   settings: GlobalSettingsType;

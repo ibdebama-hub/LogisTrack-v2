@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Building, CheckCircle2, AlertTriangle, Clock, TrendingUp, MapPin, Layers } from 'lucide-react';
-import { MOCK_CLIENT_CAMPAIGNS } from '@/lib/mockClientPortalData';
+import { MOCK_CLIENT_CAMPAIGNS } from '../../../lib/mockClientPortalData';
 
 export default function ClientDashboard() {
   const campaigns = MOCK_CLIENT_CAMPAIGNS;

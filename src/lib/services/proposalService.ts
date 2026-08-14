@@ -1,4 +1,4 @@
-import { CommercialProposal } from '@/types/crm';
+import { CommercialProposal } from '../../types/crm';
 
 export const MOCK_PROPOSALS: CommercialProposal[] = [
   {

@@ -11,7 +11,7 @@ import {
   AlertTriangle,
   Server
 } from 'lucide-react';
-import { PlatformMonitoringKpis } from '@/types/saasPlatform';
+import { PlatformMonitoringKpis } from '../../../types/saasPlatform';
 
 interface PlatformMonitoringCenterProps {
   kpis: PlatformMonitoringKpis;

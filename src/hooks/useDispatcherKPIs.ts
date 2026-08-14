@@ -1,8 +1,8 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
-import { fetchMissionControlKPIs } from '@/lib/services/kpiService';
-import { MissionControlKpis } from '@/types/missionControl';
+import { fetchMissionControlKPIs } from '../lib/services/kpiService';
+import { MissionControlKpis } from '../types/missionControl';
 
 export function useDispatcherKPIs(organizationId: string = 'tenant-101') {
   const [kpis, setKpis] = useState<MissionControlKpis | null>(null);

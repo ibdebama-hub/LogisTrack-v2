@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { MessageSquare, Send, User, ShieldCheck, Clock } from 'lucide-react';
-import { B2BMessageThread } from '@/types/b2bClientPortal';
+import { B2BMessageThread } from '../../../types/b2bClientPortal';
 
 interface ClientMessagingHubProps {
   messages: B2BMessageThread[];

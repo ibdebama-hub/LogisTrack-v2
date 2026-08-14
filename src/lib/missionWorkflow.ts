@@ -1,4 +1,4 @@
-import { MissionStatus } from '@/types/mission';
+import { MissionStatus } from '../types/mission';
 
 export const ALLOWED_TRANSITIONS: Record<MissionStatus, MissionStatus[]> = {
   BROUILLON: ['CREEE', 'ANNULEE'],

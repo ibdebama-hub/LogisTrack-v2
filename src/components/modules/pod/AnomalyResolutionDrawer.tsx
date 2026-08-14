@@ -15,7 +15,7 @@ import {
   Building,
   Info
 } from 'lucide-react';
-import { PoDItem } from '@/types/podValidation';
+import { PoDItem } from '../../../types/podValidation';
 
 interface AnomalyResolutionDrawerProps {
   item: PoDItem | null;

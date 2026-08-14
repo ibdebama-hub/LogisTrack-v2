@@ -1,11 +1,11 @@
-import { supabase } from '@/lib/supabase/queries';
+import { supabase } from '../supabase/queries';
 import {
   BiExecutiveKpis,
   BiScorecardItem,
   BiAlertRule,
   BiComparisonResult,
   BiDimensionPoint
-} from '@/types/biAnalytics';
+} from '../../types/biAnalytics';
 
 export const MOCK_BI_KPIS: BiExecutiveKpis = {
   active_campaigns: 18,

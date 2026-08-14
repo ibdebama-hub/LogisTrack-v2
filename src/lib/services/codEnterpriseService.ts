@@ -1,10 +1,10 @@
-import { supabase } from '@/lib/supabase/queries';
+import { supabase } from '../supabase/queries';
 import {
   CodPaymentEnterprise,
   CodKpisEnterprise,
   CodPaymentMethod,
   CodWorkflowStatus
-} from '@/types/codEnterprise';
+} from '../../types/codEnterprise';
 
 export const MOCK_ENTERPRISE_COD: CodPaymentEnterprise[] = [
   {

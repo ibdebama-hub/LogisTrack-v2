@@ -1,4 +1,4 @@
-import { WebhookEndpoint, WebhookEventType, WebhookPayload, WebhookDeliveryLog } from '@/types/webhooks';
+import { WebhookEndpoint, WebhookEventType, WebhookPayload, WebhookDeliveryLog } from '../../types/webhooks';
 
 export class WebhookService {
   private static endpoints: WebhookEndpoint[] = [

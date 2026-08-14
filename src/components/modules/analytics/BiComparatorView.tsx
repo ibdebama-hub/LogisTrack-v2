@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { GitCompare, TrendingUp, TrendingDown, CheckCircle2 } from 'lucide-react';
-import { BiComparisonResult } from '@/types/biAnalytics';
+import { BiComparisonResult } from '../../../types/biAnalytics';
 
 interface BiComparatorViewProps {
   comparison: BiComparisonResult;

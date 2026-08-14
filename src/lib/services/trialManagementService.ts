@@ -1,4 +1,4 @@
-import { TrialTelemetry } from '@/types/crm';
+import { TrialTelemetry } from '../../types/crm';
 
 export class TrialManagementService {
   private static trials: TrialTelemetry[] = [

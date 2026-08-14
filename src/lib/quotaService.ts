@@ -1,6 +1,6 @@
-import { supabase } from '@/lib/supabase/queries';
-import { MOCK_TENANTS } from '@/lib/mockMasterAdminData';
-import { TenantCompany } from '@/types/masterAdmin';
+import { supabase } from './supabase/queries';
+import { MOCK_TENANTS } from './mockMasterAdminData';
+import { TenantCompany } from '../types/masterAdmin';
 
 export interface QuotaCheckResult {
   allowed: boolean;

@@ -1,4 +1,4 @@
-import { Lead, LeadStage, SalesKpis, InteractionLog } from '@/types/crm';
+import { Lead, LeadStage, SalesKpis, InteractionLog } from '../../types/crm';
 
 export const MOCK_LEADS: Lead[] = [
   {

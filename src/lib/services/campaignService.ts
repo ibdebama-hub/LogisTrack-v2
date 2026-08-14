@@ -1,6 +1,6 @@
-import { supabase } from '@/lib/supabase/queries';
-import { MOCK_CAMPAIGNS } from '@/lib/mockCampaignsData';
-import { CampaignItem } from '@/types/campaigns';
+import { supabase } from '../supabase/queries';
+import { MOCK_CAMPAIGNS } from '../mockCampaignsData';
+import { CampaignItem } from '../../types/campaigns';
 
 export interface CreateCampaignDTO {
   organization_id?: string;

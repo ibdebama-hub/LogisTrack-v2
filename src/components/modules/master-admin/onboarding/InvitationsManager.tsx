@@ -15,9 +15,9 @@ import {
   Check,
   X
 } from 'lucide-react';
-import { useTenantOnboarding } from '@/hooks/useTenantOnboarding';
-import { InvitationService } from '@/lib/services/invitationService';
-import { TenantInvitation } from '@/types/saasOnboarding';
+import { useTenantOnboarding } from '../../../../hooks/useTenantOnboarding';
+import { InvitationService } from '../../../../lib/services/invitationService';
+import { TenantInvitation } from '../../../../types/saasOnboarding';
 
 export default function InvitationsManager() {
   const { invitations, resendInvitation, cancelInvitation } = useTenantOnboarding();

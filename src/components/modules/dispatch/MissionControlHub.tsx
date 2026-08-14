@@ -28,13 +28,13 @@ import OperationalTimeline from './OperationalTimeline';
 import DispatcherNotificationDrawer from './DispatcherNotificationDrawer';
 import CreateCampaignWizardModal from './CreateCampaignWizardModal';
 import BatchAssignmentModal from './BatchAssignmentModal';
-import { useMissionControl } from '@/hooks/useMissionControl';
+import { useMissionControl } from '../../../hooks/useMissionControl';
 
 import {
   DispatchLot,
   LotPriority,
   LotStatus
-} from '@/types/missionControl';
+} from '../../../types/missionControl';
 
 export default function MissionControlHub() {
   // Use Unified Mission Control Custom Hook connected to Supabase & Services Layer

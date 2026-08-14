@@ -1,6 +1,6 @@
-import { supabase } from '@/lib/supabase/queries';
-import { MOCK_OPERATIONAL_TIMELINE } from '@/lib/mockMissionControlData';
-import { OperationalTimelineEvent } from '@/types/missionControl';
+import { supabase } from '../supabase/queries';
+import { MOCK_OPERATIONAL_TIMELINE } from '../mockMissionControlData';
+import { OperationalTimelineEvent } from '../../types/missionControl';
 
 export async function fetchOperationalTimeline(
   organizationId: string = 'tenant-101'

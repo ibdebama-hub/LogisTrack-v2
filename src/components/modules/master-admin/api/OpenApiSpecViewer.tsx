@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { FileCode, Copy, Check, Terminal, Code2, ExternalLink } from 'lucide-react';
-import { SdkGeneratorService } from '@/lib/services/sdkGeneratorService';
+import { SdkGeneratorService } from '../../../../lib/services/sdkGeneratorService';
 
 export default function OpenApiSpecViewer() {
   const [selectedEndpoint, setSelectedEndpoint] = useState<string>('/api/v1/missions');

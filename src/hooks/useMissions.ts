@@ -5,9 +5,9 @@ import {
   fetchMissionsPaged,
   transitionMissionStatus,
   FetchMissionsOptions
-} from '@/lib/services/missionService';
-import { Mission, MissionKpis, MissionStatus } from '@/types/mission';
-import { MOCK_MISSIONS_KPIS } from '@/lib/mockMissionsData';
+} from '../lib/services/missionService';
+import { Mission, MissionKpis, MissionStatus } from '../types/mission';
+import { MOCK_MISSIONS_KPIS } from '../lib/mockMissionsData';
 
 export function useMissions(organizationId: string = 'tenant-101') {
   const [missions, setMissions] = useState<Mission[]>([]);

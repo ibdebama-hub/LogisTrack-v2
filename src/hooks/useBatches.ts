@@ -1,8 +1,8 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
-import { fetchDispatchLots, updateBatchStatus, reassignBatch } from '@/lib/services/batchService';
-import { DispatchLot, LotStatus } from '@/types/missionControl';
+import { fetchDispatchLots, updateBatchStatus, reassignBatch } from '../lib/services/batchService';
+import { DispatchLot, LotStatus } from '../types/missionControl';
 
 export function useBatches(organizationId: string = 'tenant-101') {
   const [lots, setLots] = useState<DispatchLot[]>([]);

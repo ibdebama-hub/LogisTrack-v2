@@ -1,6 +1,6 @@
-import { supabase } from '@/lib/supabase/queries';
-import { MOCK_MISSION_CONTROL_KPIS } from '@/lib/mockMissionControlData';
-import { MissionControlKpis } from '@/types/missionControl';
+import { supabase } from '../supabase/queries';
+import { MOCK_MISSION_CONTROL_KPIS } from '../mockMissionControlData';
+import { MissionControlKpis } from '../../types/missionControl';
 
 export async function fetchMissionControlKPIs(
   organizationId: string = 'tenant-101'

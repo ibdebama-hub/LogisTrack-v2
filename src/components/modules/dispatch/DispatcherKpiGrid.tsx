@@ -15,7 +15,7 @@ import {
   ArrowUpRight,
   ShieldCheck
 } from 'lucide-react';
-import { MissionControlKpis } from '@/types/missionControl';
+import { MissionControlKpis } from '../../../types/missionControl';
 
 interface DispatcherKpiGridProps {
   kpis: MissionControlKpis;

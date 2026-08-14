@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { Building, Save, DollarSign, Palette, CheckCircle2, ShieldCheck, Mail, Phone, MapPin, Globe } from 'lucide-react';
-import { OrganizationProfile } from '@/types/settings';
+import { OrganizationProfile } from '../../../types/settings';
 
 interface OrganizationSettingsProps {
   profile: OrganizationProfile;

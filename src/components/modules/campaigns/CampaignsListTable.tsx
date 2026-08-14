@@ -19,7 +19,7 @@ import {
   Sparkles,
   ArrowRight
 } from 'lucide-react';
-import { CampaignItem, CampaignStatus } from '@/types/campaigns';
+import { CampaignItem, CampaignStatus } from '../../../types/campaigns';
 
 interface CampaignsListTableProps {
   campaigns: CampaignItem[];

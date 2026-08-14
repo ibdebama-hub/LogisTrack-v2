@@ -4,14 +4,14 @@ import { useState, useEffect, useCallback } from 'react';
 import {
   fetchPoDRecordsPaged,
   approvePoDRecord
-} from '@/lib/services/podEnterpriseService';
-import { generatePoDPdfCertificate } from '@/lib/services/podPdfService';
+} from '../lib/services/podEnterpriseService';
+import { generatePoDPdfCertificate } from '../lib/services/podPdfService';
 import {
   PoDRecordEnterprise,
   PoDKpisEnterprise,
   PoDStatus
-} from '@/types/podEnterprise';
-import { MOCK_POD_KPIS } from '@/lib/services/podEnterpriseService';
+} from '../types/podEnterprise';
+import { MOCK_POD_KPIS } from '../lib/services/podEnterpriseService';
 
 export function usePoDEnterprise(organizationId: string = 'tenant-101') {
   const [pods, setPods] = useState<PoDRecordEnterprise[]>([]);

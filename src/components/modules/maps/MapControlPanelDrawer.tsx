@@ -18,8 +18,8 @@ import {
   SupervisionMission,
   SupervisionZone,
   SupervisionIncident
-} from '@/types/mapSupervision';
-import { getMissionStatusBadgeStyle, getMissionStatusLabel } from '@/lib/missionWorkflow';
+} from '../../../types/mapSupervision';
+import { getMissionStatusBadgeStyle, getMissionStatusLabel } from '../../../lib/missionWorkflow';
 
 interface MapControlPanelDrawerProps {
   agents: SupervisionAgent[];

@@ -5,8 +5,8 @@ import {
   fetchAgentMissions,
   agentAcceptOrRefuseMission,
   agentStartMission
-} from '@/lib/services/agentService';
-import { Mission, MissionStatus } from '@/types/mission';
+} from '../lib/services/agentService';
+import { Mission, MissionStatus } from '../types/mission';
 
 export function useAgentMissions(agentId: string = 'a1') {
   const [missions, setMissions] = useState<Mission[]>([]);

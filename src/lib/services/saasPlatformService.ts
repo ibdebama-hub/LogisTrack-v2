@@ -1,4 +1,4 @@
-import { supabase } from '@/lib/supabase/queries';
+import { supabase } from '../supabase/queries';
 import {
   SaaSTenant,
   SaaSPlan,
@@ -7,7 +7,7 @@ import {
   PlatformMonitoringKpis,
   PlatformAuditLog,
   SupportTicket
-} from '@/types/saasPlatform';
+} from '../../types/saasPlatform';
 
 export const MOCK_SAAS_MONITORING: PlatformMonitoringKpis = {
   total_tenants: 24,

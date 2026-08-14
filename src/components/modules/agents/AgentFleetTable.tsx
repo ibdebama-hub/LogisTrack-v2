@@ -22,7 +22,7 @@ import {
   Building,
   ShieldCheck
 } from 'lucide-react';
-import { FleetAgentFull, AgentStatus } from '@/types/agentFleet';
+import { FleetAgentFull, AgentStatus } from '../../../types/agentFleet';
 
 interface AgentFleetTableProps {
   agents: FleetAgentFull[];

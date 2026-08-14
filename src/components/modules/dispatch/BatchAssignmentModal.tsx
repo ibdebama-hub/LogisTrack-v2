@@ -14,7 +14,7 @@ import {
   CheckCircle2,
   AlertCircle
 } from 'lucide-react';
-import { DispatchLot } from '@/types/missionControl';
+import { DispatchLot } from '../../../types/missionControl';
 
 interface AgentOption {
   id: string;
