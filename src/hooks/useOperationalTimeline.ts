@@ -25,7 +25,7 @@ export function useOperationalTimeline(organizationId: string = 'tenant-101') {
       .on(
         'postgres_changes',
         { event: 'INSERT', schema: 'public', table: 'operation_events' },
-        (payload) => {
+        (payload: any) => {
           const newEvt = payload.new as any;
           setTimelineEvents((prev) => [
             {

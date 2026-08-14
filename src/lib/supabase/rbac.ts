@@ -35,7 +35,7 @@ export function createServerComponentClient(): SupabaseClient {
  * Creates a client-side Supabase client for React components.
  */
 export function createClientComponentClient(): SupabaseClient {
-  return createClient(supabaseUrl, supabaseKey);
+  return createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 }
 
 /**

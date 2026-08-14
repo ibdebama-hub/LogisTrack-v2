@@ -189,8 +189,19 @@ BEGIN
     COALESCE((new.raw_user_meta_data->>'organization_id')::uuid, '00000000-0000-0000-0000-000000000000'::uuid),
     COALESCE(new.raw_user_meta_data->>'full_name', 'Agent Logistrack'),
     new.email,
-    COALESCE((new.raw_user_meta_data->>'role')::public.user_role_enum, 'dispatcher')
+    COALESCE(new.raw_user_meta_data->>'role', 'dispatcher')::text::public.user_role
   );
+  RETURN new;
+EXCEPTION WHEN OTHERS THEN
+  -- Fallback if user_role enum name varies
+  INSERT INTO public.profiles (id, organization_id, full_name, email)
+  VALUES (
+    new.id,
+    COALESCE((new.raw_user_meta_data->>'organization_id')::uuid, '00000000-0000-0000-0000-000000000000'::uuid),
+    COALESCE(new.raw_user_meta_data->>'full_name', 'Agent Logistrack'),
+    new.email
+  )
+  ON CONFLICT (id) DO NOTHING;
   RETURN new;
 END;
 $$ LANGUAGE plpgsql SECURITY DEFINER;

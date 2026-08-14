@@ -1,4 +1,5 @@
 import { supabase } from './client';
+export { supabase };
 import { ImportedRow, ItemStatus, ItemType, PaymentStatus } from '../../types/logistrack';
 
 export interface FetchInvoicesOptions {

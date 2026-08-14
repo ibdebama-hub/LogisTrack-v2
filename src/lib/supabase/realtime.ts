@@ -48,7 +48,7 @@ export function setupSupabaseRealtimeSubscriptions(
     .on(
       'postgres_changes',
       { event: 'INSERT', schema: 'public', table: 'distribution_campaigns' },
-      (payload) => {
+      (payload: any) => {
         const campaignData = payload.new as any;
         if (onCampaignCreated) {
           onCampaignCreated(campaignData);
@@ -63,7 +63,7 @@ export function setupSupabaseRealtimeSubscriptions(
     .on(
       'postgres_changes',
       { event: 'UPDATE', schema: 'public', table: 'proof_of_delivery' },
-      (payload) => {
+      (payload: any) => {
         const podData = payload.new as any;
         if (podData.status === 'CERTIFIED' && onPoDCertified) {
           onPoDCertified(podData);
@@ -78,7 +78,7 @@ export function setupSupabaseRealtimeSubscriptions(
     .on(
       'postgres_changes',
       { event: 'INSERT', schema: 'public', table: 'billing_invoices' },
-      (payload) => {
+      (payload: any) => {
         const invoiceData = payload.new as any;
         if (onBillingIssued) {
           onBillingIssued(invoiceData);

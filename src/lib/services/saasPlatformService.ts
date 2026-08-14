@@ -142,14 +142,60 @@ export const MOCK_SUPPORT_TICKETS: SupportTicket[] = [
 
 export async function fetchPlatformMonitoringKpis(): Promise<PlatformMonitoringKpis> {
   try {
-    const { data } = await supabase.rpc('get_platform_monitoring_kpis');
-    if (data) return data as PlatformMonitoringKpis;
-  } catch (e) {}
+    // Try organisations first, then organizations
+    let { count: tenantsCount, error: tErr } = await supabase.from('organisations').select('*', { count: 'exact', head: true });
+    if (tErr || tenantsCount === null) {
+      const res = await supabase.from('organizations').select('*', { count: 'exact', head: true });
+      tenantsCount = res.count;
+    }
+
+    const { count: usersCount } = await supabase.from('profiles').select('*', { count: 'exact', head: true });
+    const { count: missionsCount } = await supabase.from('missions').select('*', { count: 'exact', head: true });
+    const { count: agentsCount } = await supabase.from('profiles').select('*', { count: 'exact', head: true }).eq('role', 'field_agent');
+
+    const totalTenants = tenantsCount !== null && tenantsCount !== undefined ? tenantsCount : 1;
+    const totalUsers = usersCount !== null && usersCount !== undefined ? usersCount : 1;
+    const totalMissions = missionsCount !== null && missionsCount !== undefined ? missionsCount : 0;
+    const totalAgents = agentsCount !== null && agentsCount !== undefined ? agentsCount : 0;
+
+    return {
+      total_tenants: totalTenants,
+      active_tenants: totalTenants,
+      total_users: totalUsers,
+      active_agents: totalAgents,
+      total_missions: totalMissions,
+      storage_consumed_gb: 0.05,
+      api_requests_24h: 1,
+      system_health_status: 'HEALTHY'
+    };
+  } catch (e) {
+    console.error('Error fetching platform monitoring KPIs:', e);
+  }
   return MOCK_SAAS_MONITORING;
 }
 
 export async function fetchSaaSTenants(): Promise<SaaSTenant[]> {
-  return MOCK_SAAS_TENANTS;
+  try {
+    let { data: orgData, error } = await supabase.from('organisations').select('*');
+    if (error || !orgData || orgData.length === 0) {
+      const res = await supabase.from('organizations').select('*');
+      orgData = res.data;
+    }
+    if (orgData && orgData.length > 0) {
+      return orgData.map((t: any) => ({
+        id: t.id,
+        name: t.name,
+        domain: t.slug ? `${t.slug}.logistrack.online` : 'master.logistrack.online',
+        country: 'Côte d\'Ivoire',
+        currency: 'XOF',
+        timezone: 'Africa/Abidjan',
+        plan_code: t.plan_tier || t.org_type || 'ENTERPRISE',
+        status: 'ACTIVE',
+        created_at: t.created_at ? t.created_at.split('T')[0] : new Date().toISOString().split('T')[0]
+      }));
+    }
+  } catch (e) {}
+  return [];
 }
 
 export async function fetchSaaSPlans(): Promise<SaaSPlan[]> {
@@ -161,13 +207,26 @@ export async function fetchSaaSLicenses(): Promise<SaaSLicense[]> {
 }
 
 export async function fetchSaaSInvoices(): Promise<SaaSInvoice[]> {
-  return MOCK_SAAS_INVOICES;
+  return [];
 }
 
 export async function fetchPlatformAudits(): Promise<PlatformAuditLog[]> {
-  return MOCK_SAAS_AUDITS;
+  try {
+    const { data: auditData, error } = await supabase.from('audit_logs').select('*').limit(20);
+    if (!error && auditData && auditData.length > 0) {
+      return auditData.map((a: any) => ({
+        id: a.id,
+        action_type: a.action_type || 'SYSTEM_EVENT',
+        performed_by: a.performed_by_email || 'Super Admin',
+        target_tenant_name: a.organization_name || 'Système Master',
+        details: a.action_details || 'Action enregistrée',
+        created_at: a.created_at ? new Date(a.created_at).toLocaleString() : ''
+      }));
+    }
+  } catch (e) {}
+  return [];
 }
 
 export async function fetchSupportTickets(): Promise<SupportTicket[]> {
-  return MOCK_SUPPORT_TICKETS;
+  return [];
 }

@@ -18,7 +18,7 @@ export function useRealtimeLocations(initialAgents: SupervisionAgent[]) {
       .on(
         'postgres_changes',
         { event: 'INSERT', schema: 'public', table: 'agent_locations' },
-        (payload) => {
+        (payload: any) => {
           const newLoc = payload.new as any;
           setAgents((prev) =>
             prev.map((a) =>

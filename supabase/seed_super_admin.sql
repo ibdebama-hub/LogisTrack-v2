@@ -7,41 +7,87 @@ DO $$
 DECLARE
     super_admin_email TEXT := 'master.admin@logistrack.online';
     super_admin_id UUID := 'a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11';
+    master_org_id UUID := '00000000-0000-0000-0000-000000000000';
 BEGIN
-    -- 1. Ensure public.organizations contains the Master Tenant
-    INSERT INTO public.organizations (id, name, slug, plan_type, status, created_at)
-    VALUES (
-        '00000000-0000-0000-0000-000000000000',
-        'LogisTrack SaaS Master System',
-        'logistrack-master-owner',
-        'ENTERPRISE',
-        'ACTIVE',
-        NOW()
-    )
-    ON CONFLICT (id) DO UPDATE SET status = 'ACTIVE';
+    -- 1. Insert into public.organizations (schema.sql) if table exists
+    IF EXISTS (SELECT FROM information_schema.tables WHERE table_schema = 'public' AND table_name = 'organizations') THEN
+        INSERT INTO public.organizations (id, name, slug, org_type, created_at)
+        VALUES (
+            master_org_id,
+            'LogisTrack SaaS Master System',
+            'logistrack-master-owner',
+            'ENTERPRISE',
+            NOW()
+        )
+        ON CONFLICT (id) DO NOTHING;
+    END IF;
 
-    -- 2. Create or verify User Profile in public.profiles
-    INSERT INTO public.profiles (
+    -- 2. Insert into public.organisations (production migration) if table exists
+    IF EXISTS (SELECT FROM information_schema.tables WHERE table_schema = 'public' AND table_name = 'organisations') THEN
+        INSERT INTO public.organisations (id, code, name, slug, plan_tier, created_at)
+        VALUES (
+            master_org_id,
+            'MASTER',
+            'LogisTrack SaaS Master System',
+            'logistrack-master-owner',
+            'ENTERPRISE',
+            NOW()
+        )
+        ON CONFLICT (id) DO NOTHING;
+    END IF;
+
+    -- 3. Create entry in auth.users if not present
+    INSERT INTO auth.users (
+        instance_id,
         id,
-        email,
-        full_name,
+        aud,
         role,
-        organization_id,
-        status,
-        created_at
+        email,
+        encrypted_password,
+        email_confirmed_at,
+        created_at,
+        updated_at,
+        raw_app_meta_data,
+        raw_user_meta_data,
+        is_super_admin
     )
     VALUES (
-        super_admin_id,
-        super_admin_email,
-        'Ibrahima Kassambara (Platform Owner)',
-        'super_admin',
         '00000000-0000-0000-0000-000000000000',
-        'ACTIVE',
-        NOW()
+        super_admin_id,
+        'authenticated',
+        'authenticated',
+        super_admin_email,
+        crypt('LogisTrack2026!MasterOwner#Admin', gen_salt('bf')),
+        NOW(),
+        NOW(),
+        NOW(),
+        '{"provider":"email","providers":["email"]}'::jsonb,
+        '{"full_name":"Ibrahima Kassambara (Platform Owner)"}'::jsonb,
+        true
     )
-    ON CONFLICT (id) DO UPDATE SET
-        role = 'super_admin',
-        status = 'ACTIVE';
+    ON CONFLICT (id) DO NOTHING;
+
+    -- 4. Create or verify User Profile in public.profiles
+    IF EXISTS (SELECT FROM information_schema.tables WHERE table_schema = 'public' AND table_name = 'profiles') THEN
+        INSERT INTO public.profiles (
+            id,
+            email,
+            full_name,
+            role,
+            organization_id,
+            created_at
+        )
+        VALUES (
+            super_admin_id,
+            super_admin_email,
+            'Ibrahima Kassambara (Platform Owner)',
+            'super_admin',
+            master_org_id,
+            NOW()
+        )
+        ON CONFLICT (id) DO UPDATE SET
+            role = 'super_admin';
+    END IF;
 
     RAISE NOTICE 'Super Administrator account % validated and active.', super_admin_email;
 END $$;

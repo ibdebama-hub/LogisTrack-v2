@@ -29,7 +29,7 @@ export function useNotifications(organizationId: string = 'tenant-101') {
       .on(
         'postgres_changes',
         { event: 'INSERT', schema: 'public', table: 'notifications' },
-        (payload) => {
+        (payload: any) => {
           const newNotif = payload.new as any;
           setNotifications((prev) => [
             {
