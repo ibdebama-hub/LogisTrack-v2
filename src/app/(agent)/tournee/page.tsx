@@ -23,14 +23,14 @@ import {
   Play,
   CheckCheck
 } from 'lucide-react';
-import PoDDischargeModal from '@/components/modules/pod/PoDDischargeModal';
-import DeliveryFailureModal from '@/components/modules/pod/DeliveryFailureModal';
-import AgentPhotoCapture from '@/components/modules/agent/AgentPhotoCapture';
-import AgentSignatureCanvas from '@/components/modules/agent/AgentSignatureCanvas';
-import { useAgentMissions } from '@/hooks/useAgentMissions';
-import { useGpsTracker } from '@/hooks/useGpsTracker';
-import { useOfflineSync } from '@/hooks/useOfflineSync';
-import { Mission } from '@/types/mission';
+import PoDDischargeModal from '../../../components/modules/pod/PoDDischargeModal';
+import DeliveryFailureModal from '../../../components/modules/pod/DeliveryFailureModal';
+import AgentPhotoCapture from '../../../components/modules/agent/AgentPhotoCapture';
+import AgentSignatureCanvas from '../../../components/modules/agent/AgentSignatureCanvas';
+import { useAgentMissions } from '../../../hooks/useAgentMissions';
+import { useGpsTracker } from '../../../hooks/useGpsTracker';
+import { useOfflineSync } from '../../../hooks/useOfflineSync';
+import { Mission } from '../../../types/mission';
 
 export default function FieldAgentTourPage() {
   const { missions, isLoading, acceptMission, refuseMission, startMission } = useAgentMissions('a1');

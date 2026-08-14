@@ -1,5 +1,5 @@
 import React from 'react';
-import AgentBottomNav from '@/components/modules/agent/AgentBottomNav';
+import AgentBottomNav from '../../components/modules/agent/AgentBottomNav';
 
 export default function AgentLayout({ children }: { children: React.ReactNode }) {
   return (

@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import RapidBatchScanner from '@/components/modules/agent/RapidBatchScanner';
+import RapidBatchScanner from '../../../components/modules/agent/RapidBatchScanner';
 
 export default function RapidScanPage() {
   return (

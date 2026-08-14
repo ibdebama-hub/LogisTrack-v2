@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { RefreshCw, Wifi, WifiOff, CheckCircle2, ShieldCheck, Database } from 'lucide-react';
-import { useOfflineSync } from '@/hooks/useOfflineSync';
+import { useOfflineSync } from '../../../hooks/useOfflineSync';
 
 export default function AgentSyncPage() {
   const { isOnline, pendingCount, isSyncing, triggerSyncNow } = useOfflineSync();

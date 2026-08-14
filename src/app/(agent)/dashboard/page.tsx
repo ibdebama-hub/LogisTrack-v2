@@ -17,9 +17,9 @@ import {
   ShieldCheck,
   MapPin
 } from 'lucide-react';
-import { useAgentMissions } from '@/hooks/useAgentMissions';
-import { useGpsTracker } from '@/hooks/useGpsTracker';
-import { useOfflineSync } from '@/hooks/useOfflineSync';
+import { useAgentMissions } from '../../../hooks/useAgentMissions';
+import { useGpsTracker } from '../../../hooks/useGpsTracker';
+import { useOfflineSync } from '../../../hooks/useOfflineSync';
 
 export default function AgentDashboardPage() {
   const { missions } = useAgentMissions('a1');
