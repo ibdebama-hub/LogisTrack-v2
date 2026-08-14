@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import TrialManagementRadar from '@/components/modules/master-admin/crm/TrialManagementRadar';
+import TrialManagementRadar from '../../../../components/modules/master-admin/crm/TrialManagementRadar';
 
 export default function MasterCrmTrialsPage() {
   return (

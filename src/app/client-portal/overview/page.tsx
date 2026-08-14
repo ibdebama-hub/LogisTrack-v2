@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import ClientExecutiveDashboard from '@/components/modules/client-portal/ClientExecutiveDashboard';
-import { useB2BPortal } from '@/hooks/useB2BPortal';
+import ClientExecutiveDashboard from '../../../components/modules/client-portal/ClientExecutiveDashboard';
+import { useB2BPortal } from '../../../hooks/useB2BPortal';
 
 export default function ClientOverviewPage() {
   const { kpis, analytics, exportReport } = useB2BPortal('cli-cie');

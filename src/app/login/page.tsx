@@ -16,7 +16,7 @@ import {
   Building2,
   CheckCircle2
 } from 'lucide-react';
-import { UserRole } from '@/middleware';
+import { UserRole } from '../../middleware';
 
 export default function LoginPage() {
   const router = useRouter();

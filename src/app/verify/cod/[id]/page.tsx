@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { Banknote, CheckCircle2, ShieldCheck } from 'lucide-react';
-import { verifyPublicCodReceipt } from '@/lib/services/codEnterpriseService';
+import { verifyPublicCodReceipt } from '../../../../lib/services/codEnterpriseService';
 
 export default function VerifyCodPage({ params }: { params: { id: string } }) {
   const [verificationData, setVerificationData] = useState<any>(null);

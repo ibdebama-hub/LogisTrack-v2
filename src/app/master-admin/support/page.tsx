@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import SupportTicketHub from '@/components/modules/master-admin/SupportTicketHub';
-import { usePlatformManagement } from '@/hooks/usePlatformManagement';
+import SupportTicketHub from '../../../components/modules/master-admin/SupportTicketHub';
+import { usePlatformManagement } from '../../../hooks/usePlatformManagement';
 
 export default function PlatformSupportPage() {
   const { tickets } = usePlatformManagement();

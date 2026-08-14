@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import ApiKeysManager from '@/components/modules/master-admin/ApiKeysManager';
-import { usePlatformManagement } from '@/hooks/usePlatformManagement';
+import ApiKeysManager from '../../../components/modules/master-admin/ApiKeysManager';
+import { usePlatformManagement } from '../../../hooks/usePlatformManagement';
 
 export default function ApiKeysManagementPage() {
   const { apiKeys, createApiKey } = usePlatformManagement();

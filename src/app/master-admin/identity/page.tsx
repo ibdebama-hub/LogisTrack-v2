@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import IdentityManagementHub from '@/components/modules/master-admin/identity/IdentityManagementHub';
+import IdentityManagementHub from '../../../components/modules/master-admin/identity/IdentityManagementHub';
 
 export default function MasterAdminIdentityPage() {
   return (

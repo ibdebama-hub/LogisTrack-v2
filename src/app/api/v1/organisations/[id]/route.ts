@@ -1,4 +1,4 @@
-import { ApiGatewayService } from '@/lib/services/apiGatewayService';
+import { ApiGatewayService } from '../../../../../lib/services/apiGatewayService';
 
 export async function GET(req: Request, { params }: { params: { id: string } }) {
   const auth = await ApiGatewayService.authenticateRequest(req);

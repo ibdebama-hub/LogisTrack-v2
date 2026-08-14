@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import CrmDashboardOverview from '@/components/modules/master-admin/crm/CrmDashboardOverview';
+import CrmDashboardOverview from '../../../components/modules/master-admin/crm/CrmDashboardOverview';
 
 export default function MasterCrmOverviewPage() {
   return (

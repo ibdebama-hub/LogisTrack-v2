@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import ClientMessagingHub from '@/components/modules/client-portal/ClientMessagingHub';
-import { useB2BPortal } from '@/hooks/useB2BPortal';
+import ClientMessagingHub from '../../../components/modules/client-portal/ClientMessagingHub';
+import { useB2BPortal } from '../../../hooks/useB2BPortal';
 
 export default function ClientMessagesPage() {
   const { messages, sendMessage } = useB2BPortal('cli-cie');

@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import DemosCalendarView from '@/components/modules/master-admin/crm/DemosCalendarView';
+import DemosCalendarView from '../../../../components/modules/master-admin/crm/DemosCalendarView';
 
 export default function MasterCrmDemosPage() {
   return (

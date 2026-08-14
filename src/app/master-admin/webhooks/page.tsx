@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import WebhooksHub from '@/components/modules/master-admin/api/WebhooksHub';
+import WebhooksHub from '../../../components/modules/master-admin/api/WebhooksHub';
 
 export default function MasterWebhooksPage() {
   return (

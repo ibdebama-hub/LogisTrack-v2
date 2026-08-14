@@ -3,10 +3,10 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { Settings, Globe, Key, Sparkles, ArrowRight } from 'lucide-react';
-import GlobalSaaSSettings from '@/components/modules/master-admin/settings/GlobalSaaSSettings';
-import SystemIntegrations from '@/components/modules/master-admin/settings/SystemIntegrations';
-import { DEFAULT_GLOBAL_SAAS_SETTINGS, DEFAULT_SYSTEM_INTEGRATIONS } from '@/lib/mockMasterSettingsData';
-import { GlobalSaaSSettings as GlobalSettingsType, SystemIntegrationsConfig } from '@/types/masterSettings';
+import GlobalSaaSSettings from '../../../components/modules/master-admin/settings/GlobalSaaSSettings';
+import SystemIntegrations from '../../../components/modules/master-admin/settings/SystemIntegrations';
+import { DEFAULT_GLOBAL_SAAS_SETTINGS, DEFAULT_SYSTEM_INTEGRATIONS } from '../../../lib/mockMasterSettingsData';
+import { GlobalSaaSSettings as GlobalSettingsType, SystemIntegrationsConfig } from '../../../types/masterSettings';
 
 export default function MasterSettingsPage() {
   const [activeTab, setActiveTab] = useState<'global' | 'integrations'>('global');

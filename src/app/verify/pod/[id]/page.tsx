@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { ShieldCheck, CheckCircle2, MapPin, Clock, ExternalLink, Building2 } from 'lucide-react';
-import { verifyPublicPoD } from '@/lib/services/podEnterpriseService';
+import { verifyPublicPoD } from '../../../../lib/services/podEnterpriseService';
 
 export default function VerifyPoDPage({ params }: { params: { id: string } }) {
   const [verificationData, setVerificationData] = useState<any>(null);

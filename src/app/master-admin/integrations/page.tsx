@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import IntegrationConnectorsHub from '@/components/modules/master-admin/api/IntegrationConnectorsHub';
+import IntegrationConnectorsHub from '../../../components/modules/master-admin/api/IntegrationConnectorsHub';
 
 export default function MasterIntegrationsPage() {
   return (

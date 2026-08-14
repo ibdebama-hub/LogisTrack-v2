@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import ClientDocumentCenter from '@/components/modules/client-portal/ClientDocumentCenter';
-import { useB2BPortal } from '@/hooks/useB2BPortal';
+import ClientDocumentCenter from '../../../components/modules/client-portal/ClientDocumentCenter';
+import { useB2BPortal } from '../../../hooks/useB2BPortal';
 
 export default function ClientDocumentsPage() {
   const { documents } = useB2BPortal('cli-cie');

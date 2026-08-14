@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { CrmService } from '@/lib/services/crmService';
+import { CrmService } from '../lib/services/crmService';
 
 import {
   Package,
@@ -30,8 +30,8 @@ import {
   Users
 } from 'lucide-react';
 
-import UseCasesGrid from '@/components/landing/UseCasesGrid';
-import ValueBenefitsSection from '@/components/landing/ValueBenefitsSection';
+import UseCasesGrid from '../components/landing/UseCasesGrid';
+import ValueBenefitsSection from '../components/landing/ValueBenefitsSection';
 
 export default function LandingPage() {
   const [billingCycle, setBillingCycle] = useState<'MONTHLY' | 'ANNUAL'>('MONTHLY');

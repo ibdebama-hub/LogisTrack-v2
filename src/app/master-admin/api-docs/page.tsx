@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import OpenApiSpecViewer from '@/components/modules/master-admin/api/OpenApiSpecViewer';
+import OpenApiSpecViewer from '../../../components/modules/master-admin/api/OpenApiSpecViewer';
 
 export default function MasterApiDocsPage() {
   return (

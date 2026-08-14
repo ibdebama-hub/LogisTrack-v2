@@ -2,9 +2,9 @@
 
 import React, { useState, useEffect } from 'react';
 import { Users, Plus, Eye, Search } from 'lucide-react';
-import { Lead } from '@/types/crm';
-import { CrmService } from '@/lib/services/crmService';
-import LeadDetailsDrawerModal from '@/components/modules/master-admin/crm/LeadDetailsDrawerModal';
+import { Lead } from '../../../../types/crm';
+import { CrmService } from '../../../../lib/services/crmService';
+import LeadDetailsDrawerModal from '../../../../components/modules/master-admin/crm/LeadDetailsDrawerModal';
 
 export default function MasterCrmLeadsPage() {
   const [leads, setLeads] = useState<Lead[]>([]);

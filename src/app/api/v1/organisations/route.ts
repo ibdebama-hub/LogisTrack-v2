@@ -1,5 +1,5 @@
-import { ApiGatewayService } from '@/lib/services/apiGatewayService';
-import { apiAuditService } from '@/lib/services/apiAuditService';
+import { ApiGatewayService } from '../../../../lib/services/apiGatewayService';
+import { apiAuditService } from '../../../../lib/services/apiAuditService';
 
 export async function GET(req: Request) {
   const startTime = Date.now();

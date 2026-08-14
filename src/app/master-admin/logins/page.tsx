@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import LoginHistoryViewer from '@/components/modules/master-admin/identity/LoginHistoryViewer';
+import LoginHistoryViewer from '../../../components/modules/master-admin/identity/LoginHistoryViewer';
 
 export default function MasterAdminLoginsPage() {
   return (

@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { Settings, Building, Mail, Phone, Bell, ShieldCheck, CheckCircle2 } from 'lucide-react';
-import { MOCK_CLIENT_PORTAL_USERS } from '@/lib/mockClientPortalData';
+import { MOCK_CLIENT_PORTAL_USERS } from '../../../lib/mockClientPortalData';
 
 export default function ClientSettingsPage() {
   const clientUser = MOCK_CLIENT_PORTAL_USERS['cli-orange'];

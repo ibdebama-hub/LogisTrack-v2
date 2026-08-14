@@ -1,10 +1,10 @@
 'use client';
 
 import React, { useState } from 'react';
-import TenantListTable from '@/components/modules/master-admin/TenantListTable';
-import TenantConfigModal from '@/components/modules/master-admin/TenantConfigModal';
-import { MOCK_TENANTS } from '@/lib/mockMasterAdminData';
-import { TenantCompany } from '@/types/masterAdmin';
+import TenantListTable from '../../../components/modules/master-admin/TenantListTable';
+import TenantConfigModal from '../../../components/modules/master-admin/TenantConfigModal';
+import { MOCK_TENANTS } from '../../../lib/mockMasterAdminData';
+import { TenantCompany } from '../../../types/masterAdmin';
 
 export default function MasterTenantsPage() {
   const [tenants, setTenants] = useState<TenantCompany[]>(MOCK_TENANTS);

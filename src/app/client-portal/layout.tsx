@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import ClientPortalLayout from '@/components/layout/ClientPortalLayout';
+import ClientPortalLayout from '../../components/layout/ClientPortalLayout';
 
 export default function ClientPortalRouteLayout({
   children

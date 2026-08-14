@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import ProposalsContractsManager from '@/components/modules/master-admin/crm/ProposalsContractsManager';
+import ProposalsContractsManager from '../../../../components/modules/master-admin/crm/ProposalsContractsManager';
 
 export default function MasterCrmProposalsPage() {
   return (

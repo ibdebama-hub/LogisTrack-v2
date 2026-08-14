@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import InvitationsManager from '@/components/modules/master-admin/onboarding/InvitationsManager';
+import InvitationsManager from '../../../components/modules/master-admin/onboarding/InvitationsManager';
 
 export default function MasterAdminInvitationsPage() {
   return (

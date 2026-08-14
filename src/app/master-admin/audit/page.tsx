@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import SaaSAuditLogViewer from '@/components/modules/master-admin/SaaSAuditLogViewer';
-import { usePlatformManagement } from '@/hooks/usePlatformManagement';
+import SaaSAuditLogViewer from '../../../components/modules/master-admin/SaaSAuditLogViewer';
+import { usePlatformManagement } from '../../../hooks/usePlatformManagement';
 
 export default function PlatformAuditPage() {
   const { audits } = usePlatformManagement();

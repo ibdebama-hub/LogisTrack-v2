@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import ClientUserManager from '@/components/modules/client-portal/ClientUserManager';
-import { useB2BPortal } from '@/hooks/useB2BPortal';
+import ClientUserManager from '../../../components/modules/client-portal/ClientUserManager';
+import { useB2BPortal } from '../../../hooks/useB2BPortal';
 
 export default function ClientUsersPage() {
   const { users } = useB2BPortal('cli-cie');

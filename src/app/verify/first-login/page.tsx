@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import FirstLoginPasswordResetModal from '@/components/modules/master-admin/identity/FirstLoginPasswordResetModal';
+import FirstLoginPasswordResetModal from '../../../components/modules/master-admin/identity/FirstLoginPasswordResetModal';
 import { useRouter } from 'next/navigation';
 import { CheckCircle2, ArrowRight, ShieldCheck } from 'lucide-react';
 

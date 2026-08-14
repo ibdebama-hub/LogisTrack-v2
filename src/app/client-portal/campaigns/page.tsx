@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Layers, MapPin, TrendingUp, Clock, CheckCircle2 } from 'lucide-react';
-import { MOCK_CLIENT_CAMPAIGNS } from '@/lib/mockClientPortalData';
+import { MOCK_CLIENT_CAMPAIGNS } from '../../../lib/mockClientPortalData';
 
 export default function ClientCampaignsPage() {
   const campaigns = MOCK_CLIENT_CAMPAIGNS;
