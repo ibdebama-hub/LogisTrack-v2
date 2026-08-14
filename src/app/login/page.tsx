@@ -17,6 +17,7 @@ import {
   CheckCircle2
 } from 'lucide-react';
 import { UserRole } from '../../middleware';
+import { supabase } from '../../lib/supabase/queries';
 
 export default function LoginPage() {
   const router = useRouter();
@@ -33,7 +34,7 @@ export default function LoginPage() {
     setErrorMessage(null);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
     setErrorMessage(null);
@@ -46,6 +47,67 @@ export default function LoginPage() {
         setErrorMessage('Mot de passe Super Admin incorrect. Accès refusé.');
         return;
       }
+    }
+
+    let fullName = email.split('@')[0];
+    let companyName = 'Mon Organisation';
+
+    // Format full_name from email or known demo patterns
+    const emailLower = email.toLowerCase();
+    if (emailLower.includes('kassambara') || emailLower.includes('gks')) {
+      fullName = 'Ibrahima Kassambara';
+      companyName = 'GKS LOGISTICS SARL';
+    } else if (emailLower.includes('master.admin')) {
+      fullName = 'Super Admin Owner';
+      companyName = 'LogisTrack Master Platform';
+    } else if (emailLower.includes('orange')) {
+      fullName = 'Responsable Orange B2B';
+      companyName = 'Orange Guinée';
+    } else if (emailLower.includes('diallo') || emailLower.includes('dispatcher')) {
+      fullName = 'Mamadou Diallo';
+      companyName = 'Logistics West Africa (Siège)';
+    }
+
+    // Try Supabase Auth sign in if user typed custom password
+    try {
+      const { data: authData } = await supabase.auth.signInWithPassword({ email, password });
+      if (authData?.user) {
+        const { data: profile } = await supabase.from('profiles').select('*, organisations(name), organizations(name)').eq('id', authData.user.id).maybeSingle();
+        if (profile) {
+          if (profile.full_name) fullName = profile.full_name;
+          const orgName = profile.organisations?.name || profile.organizations?.name;
+          if (orgName) companyName = orgName;
+        }
+      } else {
+        const { data: profiles } = await supabase.from('profiles').select('*, organisations(name)').eq('email', email);
+        if (profiles && profiles.length > 0) {
+          if (profiles[0].full_name) fullName = profiles[0].full_name;
+          if (profiles[0].organisations?.name) companyName = profiles[0].organisations.name;
+        }
+      }
+    } catch (e) {
+      // Offline fallback
+    }
+
+    const initials = fullName
+      .split(' ')
+      .filter(Boolean)
+      .map((n: string) => n[0])
+      .join('')
+      .toUpperCase()
+      .slice(0, 2) || 'IK';
+
+    if (typeof window !== 'undefined') {
+      localStorage.setItem(
+        'logistrack_user_session',
+        JSON.stringify({
+          email,
+          full_name: fullName,
+          company_name: companyName,
+          role: selectedRole,
+          initials
+        })
+      );
     }
 
     // Store user role cookie for middleware routing
@@ -72,7 +134,7 @@ export default function LoginPage() {
           router.push('/overview');
           break;
       }
-    }, 600);
+    }, 400);
   };
 
   return (

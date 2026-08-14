@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import {
   Menu,
@@ -12,14 +12,40 @@ import {
 } from 'lucide-react';
 import ClientPortalSidebar from './ClientPortalSidebar';
 import { MOCK_CLIENT_PORTAL_USERS } from '../../lib/mockClientPortalData';
+import { ClientPortalUser } from '../../types/b2bClientPortal';
 
 export default function ClientPortalLayout({ children }: { children: React.ReactNode }) {
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [selectedClientId, setSelectedClientId] = useState('cli-orange');
   const [searchQuery, setSearchQuery] = useState('');
+  const [userClient, setUserClient] = useState<any | null>(null);
 
-  const activeClient = MOCK_CLIENT_PORTAL_USERS[selectedClientId] || MOCK_CLIENT_PORTAL_USERS['cli-orange'];
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem('logistrack_user_session');
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (parsed.company_name) {
+          setUserClient({
+            id: 'cli-custom',
+            client_name: parsed.company_name,
+            client_code: parsed.initials || 'GKS',
+            contact_name: parsed.full_name || 'Contact Client',
+            contact_email: parsed.email || 'contact@gks-logistics.gn',
+            contact_phone: '+224 620 00 00 00',
+            active_campaigns_count: 3,
+            total_items_delivered: 4500,
+            pending_items_count: 120,
+            total_invoiced_xof: 12500000,
+            unpaid_invoices_xof: 2500000
+          });
+        }
+      }
+    } catch (e) {}
+  }, []);
+
+  const activeClient = userClient || MOCK_CLIENT_PORTAL_USERS[selectedClientId] || MOCK_CLIENT_PORTAL_USERS['cli-orange'];
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 font-sans">
@@ -65,10 +91,11 @@ export default function ClientPortalLayout({ children }: { children: React.React
               <div className="flex items-center gap-2 bg-slate-900 px-3 py-1.5 rounded-xl border border-slate-800 text-xs">
                 <Sparkles className="w-3.5 h-3.5 text-amber-400" />
                 <select
-                  value={selectedClientId}
+                  value={userClient ? 'cli-custom' : selectedClientId}
                   onChange={e => setSelectedClientId(e.target.value)}
                   className="bg-transparent text-white font-bold focus:outline-none cursor-pointer"
                 >
+                  {userClient && <option value="cli-custom">{userClient.client_name} ({userClient.client_code})</option>}
                   <option value="cli-orange">Orange Guinée (OGN)</option>
                   <option value="cli-ba">Banque Atlantique (BAT)</option>
                 </select>

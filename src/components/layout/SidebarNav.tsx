@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import {
@@ -110,6 +110,28 @@ export default function SidebarNav({
 }: SidebarNavProps) {
   const pathname = usePathname();
   const [activeOrg, setActiveOrg] = useState('Logistics West Africa (Siège)');
+  const [userInfo, setUserInfo] = useState({
+    name: 'Yves Touré',
+    initials: 'YT',
+    role: 'Dispatcher Principal'
+  });
+
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem('logistrack_user_session');
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (parsed.company_name) setActiveOrg(parsed.company_name);
+        if (parsed.full_name) {
+          setUserInfo({
+            name: parsed.full_name,
+            initials: parsed.initials || parsed.full_name.slice(0, 2).toUpperCase(),
+            role: parsed.role ? parsed.role.replace('_', ' ') : 'Administrateur'
+          });
+        }
+      }
+    } catch (e) {}
+  }, []);
 
   return (
     <>
@@ -218,13 +240,13 @@ export default function SidebarNav({
           <div className={`flex items-center ${isCollapsed ? 'justify-center' : 'justify-between'} gap-3`}>
             <div className="flex items-center gap-3 overflow-hidden">
               <div className="w-9 h-9 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center text-indigo-400 font-bold text-xs shrink-0">
-                YT
+                {userInfo.initials}
               </div>
               {!isCollapsed && (
                 <div className="overflow-hidden">
-                  <span className="text-xs font-bold text-white block truncate">Yves Touré</span>
+                  <span className="text-xs font-bold text-white block truncate">{userInfo.name}</span>
                   <span className="text-[10px] font-mono text-emerald-400 block truncate">
-                    Dispatcher Principal
+                    {userInfo.role}
                   </span>
                 </div>
               )}

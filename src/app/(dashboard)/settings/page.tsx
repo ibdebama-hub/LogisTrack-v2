@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Settings, Building, MessageSquare, Users, Sparkles, CheckCircle2 } from 'lucide-react';
 import OrganizationSettings from '../../../components/modules/settings/OrganizationSettings';
 import SmsGatewayConfig from '../../../components/modules/settings/SmsGatewayConfig';
@@ -28,6 +28,36 @@ export default function SettingsPage() {
   const [users, setUsers] = useState<SystemUser[]>(MOCK_SYSTEM_USERS);
 
   const [isInviteModalOpen, setIsInviteModalOpen] = useState(false);
+
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem('logistrack_user_session');
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (parsed.company_name) {
+          setOrgProfile(prev => ({
+            ...prev,
+            company_name: parsed.company_name
+          }));
+        }
+        if (parsed.full_name) {
+          setUsers(prev => [
+            {
+              id: 'user-active',
+              full_name: parsed.full_name,
+              email: parsed.email || 'admin@gks-logistics.gn',
+              phone: '+224 620 00 00 00',
+              role: parsed.role || 'DISPATCHER',
+              status: 'ACTIF',
+              last_login: 'Maintenant',
+              zone_assigned: 'Siège Social'
+            },
+            ...prev
+          ]);
+        }
+      }
+    } catch (e) {}
+  }, []);
 
   // Toggle user status
   const handleToggleUserStatus = (userId: string) => {

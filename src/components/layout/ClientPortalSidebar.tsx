@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import {
@@ -37,6 +37,28 @@ export default function ClientPortalSidebar({
   activeClient
 }: ClientPortalSidebarProps) {
   const pathname = usePathname();
+
+  const [clientInfo, setClientInfo] = useState({
+    client_name: activeClient.client_name,
+    contact_name: activeClient.contact_name,
+    client_code: activeClient.client_code
+  });
+
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem('logistrack_user_session');
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (parsed.company_name || parsed.full_name) {
+          setClientInfo({
+            client_name: parsed.company_name || activeClient.client_name,
+            contact_name: parsed.full_name || activeClient.contact_name,
+            client_code: parsed.initials || activeClient.client_code
+          });
+        }
+      }
+    } catch (e) {}
+  }, [activeClient]);
 
   const NAV_ITEMS = [
     { label: 'Tableau de Bord', href: '/client-portal/overview', icon: LayoutDashboard },
@@ -108,8 +130,8 @@ export default function ClientPortalSidebar({
                 <span className="text-[10px] font-mono font-bold text-amber-400 uppercase">Donneur d'Ordre</span>
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
               </div>
-              <div className="font-extrabold text-white text-xs truncate">{activeClient.client_name}</div>
-              <div className="text-[10px] text-slate-400 font-mono truncate">{activeClient.contact_name}</div>
+              <div className="font-extrabold text-white text-xs truncate">{clientInfo.client_name}</div>
+              <div className="text-[10px] text-slate-400 font-mono truncate">{clientInfo.contact_name}</div>
             </div>
           )}
 
@@ -144,11 +166,11 @@ export default function ClientPortalSidebar({
           <div className={`flex items-center ${isCollapsed ? 'justify-center' : 'justify-between'} gap-2`}>
             <div className="flex items-center gap-2 overflow-hidden">
               <div className="w-8 h-8 rounded-xl bg-amber-500/20 border border-amber-500/30 text-amber-300 font-bold text-xs flex items-center justify-center shrink-0">
-                {activeClient.client_code}
+                {clientInfo.client_code}
               </div>
               {!isCollapsed && (
                 <div className="truncate text-left">
-                  <span className="font-bold text-white text-xs block truncate">{activeClient.contact_name}</span>
+                  <span className="font-bold text-white text-xs block truncate">{clientInfo.contact_name}</span>
                   <span className="text-[9px] text-emerald-400 font-mono block">Espace Sécurisé RLS</span>
                 </div>
               )}
